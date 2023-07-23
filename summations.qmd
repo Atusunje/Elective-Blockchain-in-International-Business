@@ -5,22 +5,92 @@ jupyter: envpy39
 
 See book [section](https://learning.oreilly.com/library/view/essential-math-for/9781098102920/ch01.html#idm45252826042848){target="_blank"}
 
+**Mathematical Concept of Summations:**
+
+In mathematics, summation is a concept that represents the addition of a sequence of numbers or terms. It is denoted by the symbol "Σ" (sigma) and is used to express the total sum of a series of terms. The general form of a summation is:
+
+$\sum_{n=1}^{k} f(n)$
+
+Here, $n$ is the index variable that takes on values from 1 to $k$ and $f(n)$ is the function that defines the terms to be summed. The summation symbol indicates that we need to add up all the terms in the series for each value of $n$.
+
+**Example of Summation:**
+
+Let's consider the following example of a simple summation:
+
+$\sum_{n=1}^{5} n$
+
+This summation represents adding up all the integers from 1 to 5:
+
+1 + 2 + 3 + 4 + 5 = 15
+
+**Implementing Summations in Python:**
+
+In Python, you can use loops to implement summations. The `for` loop is commonly used to iterate through a range of values and accumulate the sum.
+
+**Example of Summation in Python:**
+
+```{python}
+# Calculate the summation Σ (n = 1 to 5) n
+total_sum = 0
+for n in range(1, 6):
+    total_sum += n
+
+print(total_sum)  # Output: 15
+```
+
+**Relation with Geometric Series:**
+
+A geometric series is a specific type of summation in which each term is found by multiplying the previous term by a constant factor. The general form of a geometric series is:
+
+$\sum_{n=0}^{k} ar^n$
+
+Where $a$ is the first term, $r$ is the common ratio between consecutive terms, and $n$ is the index variable. Geometric series are commonly used in various mathematical and financial applications.
+
+**Application in Valuation of Investments - Discounting Cash Flows:**
+
+The concept of summations and geometric series is essential in finance for the valuation of investments using discounted cash flow (DCF) analysis. DCF is a widely used method to determine the present value of future cash flows.
+
+When a constant series of cash flows is expected to be received in the future (e.g., an investment that generates fixed returns over time), we can represent it as a geometric series. However, since money received in the future is not as valuable as money received today (due to the time value of money), we need to discount these future cash flows to their present value using an appropriate discount rate.
+
+The present value (PV) of a series of future cash flows can be calculated using the geometric series formula:
+
+$PV = C * (1 + \frac{1}{(1 + r)^1} + \frac{1}{(1 + r)^2} + ... + \frac{1}{(1 + r)^k}) = C * \sum_{n=0}^{k} \frac{1}{(1 + r)^n} = 1+ C*\frac{1-(1/(1+r)^k}{r}$
+
+Where: - $PV$ is the present value of the cash flows. - $C$ is the constant cash flow received each period. - $r$ is the discount rate (expressed as a decimal). - $n$ is the number of periods (the investment horizon).
+
+By discounting future cash flows back to their present value, we can compare investments with different time frames or cash flow patterns and make informed investment decisions.
+
+```{python}
+def geom_series(a, k):
+  summation = sum(a**i for i in range(0, k+1))
+  return summation
+
+r = 0.1
+a = 1/(1+r)
+k = 5
+geom_series(a, k)
+1+(1-(1/(1+r)**5))/r
+```
+
+**Conclusion:**
+
+Summations are a fundamental mathematical concept used to express the total sum of a sequence of terms. They find various applications in mathematics, computer science, and finance. In finance, summations and geometric series are utilized in discounted cash flow analysis to determine the present value of future cash flows, helping investors make informed decisions about their investments based on the time value of money. Python provides a convenient way to implement summations, making it a powerful tool for mathematical calculations and financial analysis.
+
 ```{python}
 import matplotlib.pyplot as plt
 import numpy as np
 
-def inf_series(a, k):
-  summation = sum(a**i for i in range(0, k))
-  return summation
-
 r1 = 0.9
-r2 = 0.5
+r2 = 0.75
+r3 = 0.5
 x = np.arange(2, 100)
-y1 = np.array([inf_series(r1, k) for k in x])
-y2 = np.array([inf_series(r2, k) for k in x])
+y1 = np.array([geom_series(r1, k) for k in x])
+y2 = np.array([geom_series(r2, k) for k in x])
+y3 = np.array([geom_series(r3, k) for k in x])
 plt.clf()
 plt.plot(x, y1)
 plt.plot(x, y2)
+plt.plot(x, y3)
 plt.show()
 
 ```
