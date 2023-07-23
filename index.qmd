@@ -19,6 +19,8 @@ Before starting this module make sure you have:
 -   access to the book *Nield, T. (2022). Essential Math for Data Science. O'Reilly Media, Inc.*
 
 -   a data science environment [setup](https://businessdatasolutions.github.io/datamining-course/book/setup.html){target="_blank"}
+
+In case you have not yet setup your environment you can use online notebook services like [Google Colab](https://youtu.be/inN8seMm7UI){target="_blank"} or [JupyterLab](https://jupyter.org/try-jupyter/lab/?path=notebooks%2FIntro.ipynb){target="_blank"} or [Replit](https://replit.com/){target="_blank"}
 :::
 :::
 
@@ -30,9 +32,9 @@ In week 1 and 2 we'll be covering chapter 1 with the following topics:
 
 3.  [**Variables**](variables.html)
 
-4.  [**Functions**](https://learning.oreilly.com/library/view/essential-math-for/9781098102920/ch01.html#idm45252829259280)
+4.  [**Functions**](functions.html)
 
-5.  [**Summations**](https://learning.oreilly.com/library/view/essential-math-for/9781098102920/ch01.html#idm45252826042848)
+5.  [**Summations**](summations.html)
 
 6.  [**Exponents**](https://learning.oreilly.com/library/view/essential-math-for/9781098102920/ch01.html#idm45252828538032)
 

@@ -1,0 +1,64 @@
+---
+title: "Functions"
+jupyter: envpy39
+---
+
+See book [section](https://learning.oreilly.com/library/view/essential-math-for/9781098102920/ch01.html#idm45252829259280){target="_blank"}
+
+**Relationship Between Mathematical Functions and Functions in Python**
+
+Mathematical functions and functions in Python share some fundamental concepts, but they are implemented and used in different ways. Understanding their relationship can help us leverage the power of Python libraries like SymPy for symbolic mathematics and visualization libraries for plotting.
+
+**1. Mathematical Functions:**
+
+In mathematics, functions are a fundamental concept that relates an input (or a set of inputs) to an output. A mathematical function typically takes one or more variables as inputs and produces a single output. Functions are often denoted by symbols like "f(x)" or "g(x, y)".
+
+**Example: Mathematical Function**
+
+$$f(x) = x^2 + 6x + 9$$
+
+**2. Functions in Python:**
+
+In Python, functions are blocks of code that perform a specific task. They can take input arguments and return a result. Python functions can be defined using the `def` keyword and can be called multiple times within a program.
+
+**Example: Python Function**
+
+```{python}
+def f(x):
+    return x**2 + 6*x + 9
+```
+
+**3. Using SymPy for Symbolic Mathematics:**
+
+SymPy is a Python library for symbolic mathematics. It allows us to work with mathematical expressions in symbolic form, just like we do in mathematics. SymPy functions can be used to manipulate and simplify algebraic expressions.
+
+**Example 1: Plotting a Mathematical Function**
+
+```{python}
+from sympy import *
+
+x = symbols('x')
+f = x**2 + 6*x + 9
+
+plot(f, ylim=(-50, 175))
+```
+
+**Example 2: Plotting Multiple Mathematical Functions**
+```{python}
+fd = 20*x - 40
+
+plot(f, fd, ylim=(-50, 175))
+```
+
+**Example 3: Plotting Multiple Mathematical Functions**
+```{python}
+g = sin(x)
+h = sin(x - pi)
+gh = g+h
+
+plot(g, h, gh, (x, -2*pi, 2*pi), ylim=(-1, 1))
+```
+
+**Conclusion:**
+
+The relationship between mathematical functions and functions in Python revolves around the idea of relating inputs to outputs. Python provides a practical and versatile environment for working with functions, and libraries like SymPy and Matplotlib enhance the capabilities to handle symbolic mathematics and create visual representations of functions. By understanding this relationship, you can leverage Python's functionality for mathematical computations and visualization, making it a powerful tool for various scientific and engineering tasks.

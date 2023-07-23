@@ -20,5 +20,7 @@ website:
       - numbertheory.qmd
       - orderofoperations.qmd
       - variables.qmd
+      - functions.qmd
+      - summations.qmd
 editor: visual
 jupyter: envpy39

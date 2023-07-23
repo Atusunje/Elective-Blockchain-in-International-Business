@@ -43,7 +43,7 @@ student_info = {"name": "Alice", "age": 25}  # Dictionary
 
 **4. Mathematical Operations vs. Python Operations:**
 
-Both mathematical and Python variables can be used in mathematical operations, but there are some differences in notation. For instance, in mathematics, multiplication is often denoted with the "*" symbol, while in Python, it is also denoted by "*". However, the operators for addition, subtraction, and division are the same in both contexts.
+Both mathematical and Python variables can be used in mathematical operations, but there are some differences in notation. For instance, in mathematics, multiplication is often denoted with the "x" symbol, while in Python it is denoted by "*". However, the operators for addition, subtraction, and division are the same in both contexts.
 
 **Example: Python Operations**
 ```{python}
