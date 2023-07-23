@@ -1,0 +1,48 @@
+---
+title: "Introduction"
+format: html
+editor: visual
+jupyter: envpy39
+---
+
+![](images/bookcover.jpeg)
+
+## **Prerequisites**
+
+Before starting this module make sure you have:
+
+-   access to the book *Nield, T. (2022). Essential Math for Data Science. O'Reilly Media, Inc.*
+
+-   a data science environment [setup](https://businessdatasolutions.github.io/datamining-course/book/setup.html){target="_blank"}
+
+In week 1 we'll be covering chapter 1 with the following topics:
+
+1.  [**Number Theory**](numbertheory.html)
+
+2.  [**Order of Operations**](https://learning.oreilly.com/library/view/essential-math-for/9781098102920/ch01.html#idm45252818992512)
+
+3.  [**Variables**](https://learning.oreilly.com/library/view/essential-math-for/9781098102920/ch01.html#idm45252832469312)
+
+4.  [**Functions**](https://learning.oreilly.com/library/view/essential-math-for/9781098102920/ch01.html#idm45252829259280)
+
+5.  [**Summations**](https://learning.oreilly.com/library/view/essential-math-for/9781098102920/ch01.html#idm45252826042848)
+
+6.  [**Exponents**](https://learning.oreilly.com/library/view/essential-math-for/9781098102920/ch01.html#idm45252828538032)
+
+7.  [**Logarithms**](https://learning.oreilly.com/library/view/essential-math-for/9781098102920/ch01.html#idm45252823799024)
+
+8.  [**Euler's Number and Natural Logarithms**](https://learning.oreilly.com/library/view/essential-math-for/9781098102920/ch01.html#idm45252823468736)
+
+    1.  [**Euler's Number**](https://learning.oreilly.com/library/view/essential-math-for/9781098102920/ch01.html#idm45252826648304)
+
+    2.  [**Natural Logarithms**](https://learning.oreilly.com/library/view/essential-math-for/9781098102920/ch01.html#idm45252826647424)
+
+9.  [**Limits**](https://learning.oreilly.com/library/view/essential-math-for/9781098102920/ch01.html#idm45252826293904)
+
+10. [**Derivatives**](https://learning.oreilly.com/library/view/essential-math-for/9781098102920/ch01.html#idm45252826120304)
+
+    1.  [**Partial Derivatives**](https://learning.oreilly.com/library/view/essential-math-for/9781098102920/ch01.html#idm45252825557952)
+
+    2.  [**The Chain Rule**](https://learning.oreilly.com/library/view/essential-math-for/9781098102920/ch01.html#idm45252825380896)
+
+11. [**Integrals**](https://learning.oreilly.com/library/view/essential-math-for/9781098102920/ch01.html#idm45252825129584)

@@ -1,0 +1,119 @@
+---
+title: "Number Theory"
+format: html
+editor: visual
+jupyter: envpy39
+---
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/-QHff5pRdM8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
+
+</iframe>
+
+Number theory is a branch of mathematics that deals with the properties and relationships of numbers, especially integers.{python}, like many programming languages, has several built-in types to handle numbers, each with its own capabilities. The three most common numerical types in{python} are `int` for integers, `float` for floating-point numbers, and `complex` for complex numbers.
+
+Let's start with a basic understanding of these number types:
+
+-   Integers (`int`): These are positive or negative whole numbers with no decimal point. Integers in{python} can be of any size, limited only by the amount of memory your system has.
+
+```{python}
+a = 5
+b = -3
+c = 12345678901234567890  #{python} 3 can handle very large integers.
+```
+
+-   Floating-Point (`float`): These are real numbers (i.e., numbers that can have a decimal point). The float type in{python} designates a floating-point number. Float values are specified with a decimal point. Optionally, the character e or E followed by a positive or negative integer may be appended to specify scientific notation.
+
+```{python}
+a = 3.14159  # Pi to 5 decimal places.
+b = -0.01  # Negative float.
+c = 2.5e-4  # 2.5 times 10 to the power of -4.
+```
+
+-   Complex (`complex`): Complex numbers are numbers with a real and an imaginary component. In{python}, complex numbers can be created using the `complex(real, imag)` function, or you can use the 'j' suffix in a literal to specify the imaginary part.
+
+```{python}
+a = complex(2, 3)  # 2 is the real part, 3 is the imaginary part.
+b = 3 + 4j  # Another way to create a complex number.
+```
+
+Now, let's illustrate some basic number theory concepts using these{python} number types.
+
+1.  **Even and Odd Numbers**: An integer is even if it is divisible by 2, and odd if it's not.
+
+```{python}
+def is_even(n):
+    return n % 2 == 0
+
+def is_odd(n):
+    return n % 2 != 0
+
+print(is_even(4))  # True
+print(is_odd(7))  # True
+```
+
+2.  **Prime Numbers**: A prime number is a positive integer greater than 1 that has no positive integer divisors other than 1 and itself.
+
+```{python}
+def is_prime(n):
+    if n <= 1:
+        return False
+    for i in range(2, int(n**0.5) + 1):
+        if n % i == 0:
+            return False
+    return True
+
+print(is_prime(7))  # True
+print(is_prime(10))  # False
+```
+
+3.  **Irrational Numbers**: An irrational number cannot be expressed as a ratio between two numbers and it does not repeat periodically. One example is the number π (pi), which{python} can approximate with float. It's important to remember that due to the limitations of representing real numbers in digital computers, certain mathematical properties might not hold exactly in computer arithmetic, especially with floating-point numbers.
+
+```{python}
+import math
+
+print(math.pi)  # 3.141592653589793
+```
+
+One of the central themes in number theory is the study of prime numbers. A prime number is a positive integer greater than one that has no positive divisors other than one and itself. For example, 2, 3, 5, 7, 11, and 13 are all prime numbers. A positive integer that is not prime is called composite. The fundamental theorem of arithmetic states that every positive integer can be uniquely expressed as a product of primes. This means that there is only one way to write a positive integer as a product of primes, up to the order in which the factors are written.
+
+Number theory has many practical applications, particularly in cryptography, which is the study of encoding messages to keep them secure from unauthorized access. Many encryption algorithms rely on the difficulty of factoring large composite numbers into primes, which is a problem that is believed to be computationally infeasible for sufficiently large integers. As a result, number theory plays a crucial role in the security of modern communication systems.
+
+```{python}
+import time
+
+tic = time.time()
+
+def find_factors(num): 
+  factors = []
+  for i in range(1, num+1):
+    if num % i == 0:
+      factors.append(i) 
+  return factors
+
+tic = time.time()
+print(find_factors(12)) 
+toc = time.time()
+print(f'{toc - tic} secs')
+
+tic = time.time()
+print(find_factors(997)) 
+toc = time.time()
+print(f'{toc - tic} secs')
+
+tic = time.time()
+print(find_factors(999983)) 
+toc = time.time()
+print(f'{toc - tic} secs')
+
+tic = time.time()
+# print(find_factors(997*999983)) 
+toc = time.time()
+print(f'{toc - tic} secs')
+```
+
+---
+**Assignment:** Make a short video explaining how factorization and prime numbers are used for encryption. Do proper research and use code demos.
+
+**Stretch:** Expand your video with an exploration of the current state of quantum computing and it's expected evolution. Discuss and illustrate the implications for current encryption methodologies. Provide a list of interesting resources on the matter.
+
+**Challenge:** Share your content online (e.g. Linkedin), gather feedback and write a reflection on it.
