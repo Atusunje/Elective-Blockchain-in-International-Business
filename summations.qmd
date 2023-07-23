@@ -68,8 +68,10 @@ def geom_series(a, k):
 r = 0.1
 a = 1/(1+r)
 k = 5
-geom_series(a, k)
-1+(1-(1/(1+r)**5))/r
+a = geom_series(a, k)
+b = 1+(1-(1/(1+r)**5))/r
+
+print(a, b)
 ```
 
 **Conclusion:**
