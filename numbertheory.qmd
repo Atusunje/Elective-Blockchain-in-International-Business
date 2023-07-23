@@ -1,27 +1,27 @@
 ---
 title: "Number Theory"
-format: html
-editor: visual
 jupyter: envpy39
 ---
+
+See book [section](https://learning.oreilly.com/library/view/essential-math-for/9781098102920/ch01.html#idm45252818933376){target="_blank"}
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/-QHff5pRdM8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
 
 </iframe>
 
-Number theory is a branch of mathematics that deals with the properties and relationships of numbers, especially integers.{python}, like many programming languages, has several built-in types to handle numbers, each with its own capabilities. The three most common numerical types in{python} are `int` for integers, `float` for floating-point numbers, and `complex` for complex numbers.
+Number theory is a branch of mathematics that deals with the properties and relationships of numbers, especially integers. Python, like many programming languages, has several built-in types to handle numbers, each with its own capabilities. The three most common numerical types in Python are `int` for integers, `float` for floating-point numbers, and `complex` for complex numbers.
 
 Let's start with a basic understanding of these number types:
 
--   Integers (`int`): These are positive or negative whole numbers with no decimal point. Integers in{python} can be of any size, limited only by the amount of memory your system has.
+-   Integers (`int`): These are positive or negative whole numbers with no decimal point. Integers in Python can be of any size, limited only by the amount of memory your system has.
 
 ```{python}
 a = 5
 b = -3
-c = 12345678901234567890  #{python} 3 can handle very large integers.
+c = 12345678901234567890  #Python 3 can handle very large integers.
 ```
 
--   Floating-Point (`float`): These are real numbers (i.e., numbers that can have a decimal point). The float type in{python} designates a floating-point number. Float values are specified with a decimal point. Optionally, the character e or E followed by a positive or negative integer may be appended to specify scientific notation.
+-   Floating-Point (`float`): These are real numbers (i.e., numbers that can have a decimal point). The float type in Python designates a floating-point number. Float values are specified with a decimal point. Optionally, the character e or E followed by a positive or negative integer may be appended to specify scientific notation.
 
 ```{python}
 a = 3.14159  # Pi to 5 decimal places.
@@ -29,14 +29,14 @@ b = -0.01  # Negative float.
 c = 2.5e-4  # 2.5 times 10 to the power of -4.
 ```
 
--   Complex (`complex`): Complex numbers are numbers with a real and an imaginary component. In{python}, complex numbers can be created using the `complex(real, imag)` function, or you can use the 'j' suffix in a literal to specify the imaginary part.
+-   Complex (`complex`): Complex numbers are numbers with a real and an imaginary component. In Python, complex numbers can be created using the `complex(real, imag)` function, or you can use the 'j' suffix in a literal to specify the imaginary part.
 
 ```{python}
 a = complex(2, 3)  # 2 is the real part, 3 is the imaginary part.
 b = 3 + 4j  # Another way to create a complex number.
 ```
 
-Now, let's illustrate some basic number theory concepts using these{python} number types.
+Now, let's illustrate some basic number theory concepts using these Python number types.
 
 1.  **Even and Odd Numbers**: An integer is even if it is divisible by 2, and odd if it's not.
 
@@ -66,7 +66,7 @@ print(is_prime(7))  # True
 print(is_prime(10))  # False
 ```
 
-3.  **Irrational Numbers**: An irrational number cannot be expressed as a ratio between two numbers and it does not repeat periodically. One example is the number π (pi), which{python} can approximate with float. It's important to remember that due to the limitations of representing real numbers in digital computers, certain mathematical properties might not hold exactly in computer arithmetic, especially with floating-point numbers.
+3.  **Irrational Numbers**: An irrational number cannot be expressed as a ratio between two numbers and it does not repeat periodically. One example is the number π (pi), which Python can approximate with float. It's important to remember that due to the limitations of representing real numbers in digital computers, certain mathematical properties might not hold exactly in computer arithmetic, especially with floating-point numbers.
 
 ```{python}
 import math
@@ -111,7 +111,8 @@ toc = time.time()
 print(f'{toc - tic} secs')
 ```
 
----
+------------------------------------------------------------------------
+
 **Assignment:** Make a short video explaining how factorization and prime numbers are used for encryption. Do proper research and use code demos.
 
 **Stretch:** Expand your video with an exploration of the current state of quantum computing and it's expected evolution. Discuss and illustrate the implications for current encryption methodologies. Provide a list of interesting resources on the matter.

@@ -1,0 +1,89 @@
+---
+title: "Order of operations"
+jupyter: envpy39
+---
+
+See book [section](https://learning.oreilly.com/library/view/essential-math-for/9781098102920/ch01.html#idm45252818992512){target="_blank"}
+
+**Mathematical Order of Operations**
+
+Mathematical order of operations refers to the rules that dictate the sequence in which mathematical operations should be performed in an expression. These rules ensure that every mathematical expression is evaluated in a consistent and unambiguous manner. The order of operations is also known as "PEMDAS" which is an acronym representing the sequence of operations: Parentheses, Exponents, Multiplication and Division (from left to right), and Addition and Subtraction (from left to right).
+
+In Python, just like in mathematics, the order of operations is essential to obtain accurate and meaningful results. Let's break down each component of the order of operations and illustrate them with Python examples, including real-world scenarios.
+
+**1. Parentheses**
+
+Parentheses are used to indicate which parts of an expression should be evaluated first. Expressions within parentheses are calculated before anything else.
+
+**Example 1: Simple Parentheses**
+
+```{python}
+result = (4 + 3) * 2
+print(result)  # Output: 14 (since 4 + 3 = 7, and 7 * 2 = 14)
+```
+
+**2. Exponents**
+
+Exponents are mathematical operations that raise a base to a certain power.
+
+**Example 2: Exponents**
+
+```{python}
+result = 2 ** 3 + 4
+print(result)  # Output: 12 (since 2 ** 3 = 8, and 8 + 4 = 12)
+```
+
+**3. Multiplication and Division**
+
+These operations are performed from left to right, whichever comes first in the expression.
+
+**Example 3: Multiplication and Division**
+
+```{python}
+result = 10 / 2 * 3
+print(result)  # Output: 15 (since 10 / 2 = 5, and 5 * 3 = 15)
+```
+
+**4. Addition and Subtraction**
+
+Similarly, addition and subtraction are performed from left to right, whichever comes first in the expression.
+
+**Example 4: Addition and Subtraction**
+
+```{python}
+result = 8 - 3 + 2
+print(result)  # Output: 7 (since 8 - 3 = 5, and 5 + 2 = 7)
+```
+
+**Real-World Examples**
+
+Let's consider some real-world examples where understanding the order of operations is crucial:
+
+**Example 5: Shopping Calculations**
+
+```{python}
+price_per_item = 5
+tax_rate = 0.08
+quantity = 3
+
+total_cost = price_per_item * quantity + (price_per_item * quantity) * tax_rate
+print(total_cost)  # Output: 16.2 (5 * 3 = 15, 15 + 15 * 0.08 = 16.2)
+```
+
+**Example 6: Engineering Calculation**
+
+```{python}
+import math
+
+base_length = 6.5 # a
+height = 8.2 # b
+
+hypotenuse = math.sqrt(base_length ** 2 + height ** 2)
+print(hypotenuse)  # Output: 10.463...
+```
+
+![](https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Pythagorean.svg/1920px-Pythagorean.svg.png){width="300"}
+
+In the second example, we use the Pythagorean theorem to find the length of the hypotenuse in a right-angled triangle. The order of operations ensures that the squares and addition are performed before the square root operation.
+
+Understanding and following the order of operations is crucial in both mathematics and programming to avoid ambiguity and obtain accurate results. Python, along with many other programming languages, follows the standard order of operations used in mathematics.

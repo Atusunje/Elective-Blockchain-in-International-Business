@@ -1,7 +1,5 @@
 ---
 title: "Introduction"
-format: html
-editor: visual
 jupyter: envpy39
 ---
 
@@ -15,11 +13,11 @@ Before starting this module make sure you have:
 
 -   a data science environment [setup](https://businessdatasolutions.github.io/datamining-course/book/setup.html){target="_blank"}
 
-In week 1 we'll be covering chapter 1 with the following topics:
+In week 1 and 2 we'll be covering chapter 1 with the following topics:
 
 1.  [**Number Theory**](numbertheory.html)
 
-2.  [**Order of Operations**](https://learning.oreilly.com/library/view/essential-math-for/9781098102920/ch01.html#idm45252818992512)
+2.  [**Order of Operations**](orderofoperations.html)
 
 3.  [**Variables**](https://learning.oreilly.com/library/view/essential-math-for/9781098102920/ch01.html#idm45252832469312)
 

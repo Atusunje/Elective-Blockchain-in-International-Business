@@ -1,0 +1,23 @@
+project:
+  type: website
+  output-dir: site
+  preview:
+    port: 4200
+    browser: true
+toc: true
+number-sections: true
+format:
+  html:
+    theme: united
+    code-fold: true
+website:
+  title: "Introduction to Math and Stats"
+  navbar:
+    background: primary
+    left:
+      - href: index.qmd
+        text: Home
+      - numbertheory.qmd
+      - orderofoperations.qmd
+editor: visual
+jupyter: envpy39
