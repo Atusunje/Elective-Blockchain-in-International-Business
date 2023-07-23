@@ -1,6 +1,6 @@
 project:
   type: website
-  output-dir: site
+  output-dir: "site"
   preview:
     port: 4200
     browser: true
@@ -19,5 +19,6 @@ website:
         text: Home
       - numbertheory.qmd
       - orderofoperations.qmd
+      - variables.qmd
 editor: visual
 jupyter: envpy39

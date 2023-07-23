@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Introduction to Math and Stats - Order of operations</title>
+<title>Introduction to Math and Stats - Variables</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -123,11 +123,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
  <span class="menu-text">Number Theory</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./orderofoperations.html" rel="" target="" aria-current="page">
+    <a class="nav-link" href="./orderofoperations.html" rel="" target="">
  <span class="menu-text">Order of operations</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./variables.html" rel="" target="">
+    <a class="nav-link active" href="./variables.html" rel="" target="" aria-current="page">
  <span class="menu-text">Variables</span></a>
   </li>  
 </ul>
@@ -149,7 +149,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Order of operations</h1>
+<h1 class="title">Variables</h1>
 </div>
 
 
@@ -164,98 +164,69 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 </header>
 
-<p>See book <a href="https://learning.oreilly.com/library/view/essential-math-for/9781098102920/ch01.html#idm45252818992512" target="_blank">section</a></p>
-<p><strong>Mathematical Order of Operations</strong></p>
-<p>Mathematical order of operations refers to the rules that dictate the sequence in which mathematical operations should be performed in an expression. These rules ensure that every mathematical expression is evaluated in a consistent and unambiguous manner. The order of operations is also known as “PEMDAS” which is an acronym representing the sequence of operations: Parentheses, Exponents, Multiplication and Division (from left to right), and Addition and Subtraction (from left to right).</p>
-<p>In Python, just like in mathematics, the order of operations is essential to obtain accurate and meaningful results. Let’s break down each component of the order of operations and illustrate them with Python examples, including real-world scenarios.</p>
-<p><strong>1. Parentheses</strong></p>
-<p>Parentheses are used to indicate which parts of an expression should be evaluated first. Expressions within parentheses are calculated before anything else.</p>
-<p><strong>Example 1: Simple Parentheses</strong></p>
+<p>See book <a href="https://learning.oreilly.com/library/view/essential-math-for/9781098102920/ch01.html#idm45252832469312" target="_blank">section</a></p>
+<p><strong>Relationship Between Mathematical Variables and Variables in Python</strong></p>
+<p>In mathematics, variables are symbols that represent unknown quantities or values. They allow us to write equations and express relationships between different elements. Similarly, in programming, variables play a crucial role in storing and manipulating data. Python, as a programming language, allows us to work with variables in ways that have similarities to mathematical variables but also exhibit some distinct characteristics.</p>
+<p><strong>1. Assigning Values to Variables:</strong></p>
+<p>In both mathematics and Python, variables need to be assigned values before they can be used. In Python, the assignment is done using the “=” operator.</p>
+<p><strong>Example: Python Variable</strong></p>
 <div class="cell" data-execution_count="1">
 <details>
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>result <span class="op">=</span> (<span class="dv">4</span> <span class="op">+</span> <span class="dv">3</span>) <span class="op">*</span> <span class="dv">2</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(result)  <span class="co"># Output: 14 (since 4 + 3 = 7, and 7 * 2 = 14)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> <span class="dv">5</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
-<div class="cell-output cell-output-stdout">
-<pre><code>14</code></pre>
 </div>
-</div>
-<p><strong>2. Exponents</strong></p>
-<p>Exponents are mathematical operations that raise a base to a certain power.</p>
-<p><strong>Example 2: Exponents</strong></p>
+<p><strong>2. Updating Values:</strong></p>
+<p>In mathematics, variables remain constant unless explicitly stated otherwise. In contrast, Python allows variables to be updated with new values during the course of a program.</p>
+<p><strong>Example: Updating Python Variable</strong></p>
 <div class="cell" data-execution_count="2">
 <details>
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>result <span class="op">=</span> <span class="dv">2</span> <span class="op">**</span> <span class="dv">3</span> <span class="op">+</span> <span class="dv">4</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(result)  <span class="co"># Output: 12 (since 2 ** 3 = 8, and 8 + 4 = 12)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> <span class="dv">5</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> x <span class="op">+</span> <span class="dv">3</span>  <span class="co"># The value of x is updated to 8</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
-<div class="cell-output cell-output-stdout">
-<pre><code>12</code></pre>
 </div>
-</div>
-<p><strong>3. Multiplication and Division</strong></p>
-<p>These operations are performed from left to right, whichever comes first in the expression.</p>
-<p><strong>Example 3: Multiplication and Division</strong></p>
+<p><strong>3. Data Types:</strong></p>
+<p>In both mathematics and Python, variables can represent different types of data. In mathematics, variables are usually used to represent real or complex numbers. In Python, variables can hold a variety of data types, including integers, floating-point numbers, strings, lists, dictionaries, etc.</p>
+<p><strong>Example: Different Data Types in Python</strong></p>
 <div class="cell" data-execution_count="3">
 <details>
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>result <span class="op">=</span> <span class="dv">10</span> <span class="op">/</span> <span class="dv">2</span> <span class="op">*</span> <span class="dv">3</span></span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(result)  <span class="co"># Output: 15 (since 10 / 2 = 5, and 5 * 3 = 15)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> <span class="dv">5</span>  <span class="co"># Integer</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> <span class="fl">3.14</span>  <span class="co"># Floating-point number</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>name <span class="op">=</span> <span class="st">"John"</span>  <span class="co"># String</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>grades <span class="op">=</span> [<span class="dv">90</span>, <span class="dv">85</span>, <span class="dv">95</span>]  <span class="co"># List</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>student_info <span class="op">=</span> {<span class="st">"name"</span>: <span class="st">"Alice"</span>, <span class="st">"age"</span>: <span class="dv">25</span>}  <span class="co"># Dictionary</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
-<div class="cell-output cell-output-stdout">
-<pre><code>15.0</code></pre>
 </div>
-</div>
-<p><strong>4. Addition and Subtraction</strong></p>
-<p>Similarly, addition and subtraction are performed from left to right, whichever comes first in the expression.</p>
-<p><strong>Example 4: Addition and Subtraction</strong></p>
+<p><strong>4. Mathematical Operations vs.&nbsp;Python Operations:</strong></p>
+<p>Both mathematical and Python variables can be used in mathematical operations, but there are some differences in notation. For instance, in mathematics, multiplication is often denoted with the “<em>” symbol, while in Python, it is also denoted by ”</em>”. However, the operators for addition, subtraction, and division are the same in both contexts.</p>
+<p><strong>Example: Python Operations</strong></p>
 <div class="cell" data-execution_count="4">
 <details>
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>result <span class="op">=</span> <span class="dv">8</span> <span class="op">-</span> <span class="dv">3</span> <span class="op">+</span> <span class="dv">2</span></span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(result)  <span class="co"># Output: 7 (since 8 - 3 = 5, and 5 + 2 = 7)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> <span class="dv">5</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> <span class="dv">3</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>result <span class="op">=</span> <span class="dv">2</span> <span class="op">*</span> x <span class="op">+</span> y  <span class="co"># The result will be 13</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
-<div class="cell-output cell-output-stdout">
-<pre><code>7</code></pre>
 </div>
-</div>
-<p><strong>Real-World Examples</strong></p>
-<p>Let’s consider some real-world examples where understanding the order of operations is crucial:</p>
-<p><strong>Example 5: Shopping Calculations</strong></p>
+<p><strong>5. Variable Names:</strong></p>
+<p>In both mathematics and Python, variable names are used to refer to specific values. However, there are some restrictions on variable names in Python. They cannot start with a number, and they cannot contain spaces or special characters except for underscores.</p>
+<p><strong>Example: Valid and Invalid Variable Names in Python</strong></p>
 <div class="cell" data-execution_count="5">
 <details>
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>price_per_item <span class="op">=</span> <span class="dv">5</span></span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>tax_rate <span class="op">=</span> <span class="fl">0.08</span></span>
-<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>quantity <span class="op">=</span> <span class="dv">3</span></span>
-<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>total_cost <span class="op">=</span> price_per_item <span class="op">*</span> quantity <span class="op">+</span> (price_per_item <span class="op">*</span> quantity) <span class="op">*</span> tax_rate</span>
-<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(total_cost)  <span class="co"># Output: 16.2 (5 * 3 = 15, 15 + 15 * 0.08 = 16.2)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Valid variable names</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>age <span class="op">=</span> <span class="dv">25</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>first_name <span class="op">=</span> <span class="st">"John"</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>interest_rate <span class="op">=</span> <span class="fl">0.05</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Invalid variable names (due to starting with a number)</span></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a><span class="dv">2</span><span class="er">nd_place</span> <span class="op">=</span> <span class="st">"Silver"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
-<div class="cell-output cell-output-stdout">
-<pre><code>16.2</code></pre>
 </div>
-</div>
-<p><strong>Example 6: Engineering Calculation</strong></p>
-<div class="cell" data-execution_count="6">
-<details>
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> math</span>
-<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>base_length <span class="op">=</span> <span class="fl">6.5</span> <span class="co"># a</span></span>
-<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>height <span class="op">=</span> <span class="fl">8.2</span> <span class="co"># b</span></span>
-<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>hypotenuse <span class="op">=</span> math.sqrt(base_length <span class="op">**</span> <span class="dv">2</span> <span class="op">+</span> height <span class="op">**</span> <span class="dv">2</span>)</span>
-<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(hypotenuse)  <span class="co"># Output: 10.463...</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-<div class="cell-output cell-output-stdout">
-<pre><code>10.463746938836012</code></pre>
-</div>
-</div>
-<p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Pythagorean.svg/1920px-Pythagorean.svg.png" class="img-fluid" width="300"></p>
-<p>In the second example, we use the Pythagorean theorem to find the length of the hypotenuse in a right-angled triangle. The order of operations ensures that the squares and addition are performed before the square root operation.</p>
-<p>Understanding and following the order of operations is crucial in both mathematics and programming to avoid ambiguity and obtain accurate results. Python, along with many other programming languages, follows the standard order of operations used in mathematics.</p>
+<p>In conclusion, the relationship between mathematical variables and variables in Python revolves around the concept of representing and working with data. Python’s variables offer greater flexibility as they can hold different data types and be updated during program execution. Understanding these similarities and differences is essential for effective programming in Python and for translating mathematical concepts into code.</p>
 
 
 

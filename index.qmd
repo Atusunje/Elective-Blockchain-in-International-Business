@@ -3,15 +3,24 @@ title: "Introduction"
 jupyter: envpy39
 ---
 
-![](images/bookcover.jpeg)
-
 ## **Prerequisites**
 
+::: columns
+::: {.column width="30%"}
+![](images/bookcover.jpeg)
+:::
+
+::: {.column width="5%"}
+:::
+
+::: {.column width="65%"}
 Before starting this module make sure you have:
 
 -   access to the book *Nield, T. (2022). Essential Math for Data Science. O'Reilly Media, Inc.*
 
 -   a data science environment [setup](https://businessdatasolutions.github.io/datamining-course/book/setup.html){target="_blank"}
+:::
+:::
 
 In week 1 and 2 we'll be covering chapter 1 with the following topics:
 
@@ -19,7 +28,7 @@ In week 1 and 2 we'll be covering chapter 1 with the following topics:
 
 2.  [**Order of Operations**](orderofoperations.html)
 
-3.  [**Variables**](https://learning.oreilly.com/library/view/essential-math-for/9781098102920/ch01.html#idm45252832469312)
+3.  [**Variables**](variables.html)
 
 4.  [**Functions**](https://learning.oreilly.com/library/view/essential-math-for/9781098102920/ch01.html#idm45252829259280)
 
