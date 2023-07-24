@@ -3,7 +3,7 @@ title: "Introduction"
 jupyter: envpy39
 ---
 
-## **Prerequisites**
+## Prerequisites
 
 ::: columns
 ::: {.column width="30%"}
@@ -24,7 +24,23 @@ In case you have not yet setup your environment you can use online notebook serv
 :::
 :::
 
-In week 1 and 2 we'll be covering chapter 1 with the following topics:
+## Purpose
+
+After studying this course, you should be able to:
+
+• Relate set theory to the concept of probability
+
+• Interpret, modify and sketch mathematical operations
+
+• Compute and solve mathematical equations
+
+• Compute, manipulate, solve and plot mathematical functions
+
+• Use Python or other data science script languages
+
+## Content
+
+In weeks 1 and 2 you'll be learning the following topics:
 
 1.  [**Number Theory**](numbertheory.html)
 
@@ -36,9 +52,9 @@ In week 1 and 2 we'll be covering chapter 1 with the following topics:
 
 5.  [**Summations**](summations.html)
 
-6.  [**Exponents**](https://learning.oreilly.com/library/view/essential-math-for/9781098102920/ch01.html#idm45252828538032)
+6.  [**Exponents**](exponentslogs.html)
 
-7.  [**Logarithms**](https://learning.oreilly.com/library/view/essential-math-for/9781098102920/ch01.html#idm45252823799024)
+7.  [**Logarithms**](exponentslogs.html)
 
 8.  [**Euler's Number and Natural Logarithms**](https://learning.oreilly.com/library/view/essential-math-for/9781098102920/ch01.html#idm45252823468736)
 

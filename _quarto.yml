@@ -22,5 +22,6 @@ website:
       - variables.qmd
       - functions.qmd
       - summations.qmd
+      - exponentslogs.qmd
 editor: visual
 jupyter: envpy39

@@ -36,6 +36,8 @@ a = complex(2, 3)  # 2 is the real part, 3 is the imaginary part.
 b = 3 + 4j  # Another way to create a complex number.
 ```
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/muBmJWOdoOA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
 Now, let's illustrate some basic number theory concepts using these Python number types.
 
 1.  **Even and Odd Numbers**: An integer is even if it is divisible by 2, and odd if it's not.
@@ -117,4 +119,4 @@ print(f'{toc - tic} secs')
 
 **Stretch:** Expand your video with an exploration of the current state of quantum computing and it's expected evolution. Discuss and illustrate the implications for current encryption methodologies. Provide a list of interesting resources on the matter.
 
-**Challenge:** Share your content online (e.g. Linkedin), gather feedback and write a reflection on it.
+**Challenge:** Share your content online (e.g. Linkedin or Medium), gather feedback and write a reflection on it.
