@@ -40,11 +40,11 @@ After studying this course, you should be able to:
 
 ## Content
 
-In weeks 1 and 2 you'll be learning the following topics:
+In weeks 1 and 2 you'll be learning the following topics (sections marked with 🤔 contain assignments):
 
-1.  [**Number Theory**](numbertheory.html)
+1.  [**Number Theory**](numbertheory.html)🤔
 
-2.  [**Order of Operations**](orderofoperations.html)
+2.  [**Order of Operations**](orderofoperations.html)🤔
 
 3.  [**Variables**](variables.html)
 
@@ -52,22 +52,20 @@ In weeks 1 and 2 you'll be learning the following topics:
 
 5.  [**Summations**](summations.html)
 
-6.  [**Exponents**](exponentslogs.html)
+6.  [**Exponents and** **Logarithms**](exponentslogs.html)🤔
 
-7.  [**Logarithms**](exponentslogs.html)
-
-8.  [**Euler's Number and Natural Logarithms**](https://learning.oreilly.com/library/view/essential-math-for/9781098102920/ch01.html#idm45252823468736)
+7.  [**Euler's Number and Natural Logarithms**](https://learning.oreilly.com/library/view/essential-math-for/9781098102920/ch01.html#idm45252823468736)
 
     1.  [**Euler's Number**](https://learning.oreilly.com/library/view/essential-math-for/9781098102920/ch01.html#idm45252826648304)
 
     2.  [**Natural Logarithms**](https://learning.oreilly.com/library/view/essential-math-for/9781098102920/ch01.html#idm45252826647424)
 
-9.  [**Limits**](https://learning.oreilly.com/library/view/essential-math-for/9781098102920/ch01.html#idm45252826293904)
+8.  [**Limits**](https://learning.oreilly.com/library/view/essential-math-for/9781098102920/ch01.html#idm45252826293904)
 
-10. [**Derivatives**](https://learning.oreilly.com/library/view/essential-math-for/9781098102920/ch01.html#idm45252826120304)
+9.  [**Derivatives**](https://learning.oreilly.com/library/view/essential-math-for/9781098102920/ch01.html#idm45252826120304)
 
     1.  [**Partial Derivatives**](https://learning.oreilly.com/library/view/essential-math-for/9781098102920/ch01.html#idm45252825557952)
 
     2.  [**The Chain Rule**](https://learning.oreilly.com/library/view/essential-math-for/9781098102920/ch01.html#idm45252825380896)
 
-11. [**Integrals**](https://learning.oreilly.com/library/view/essential-math-for/9781098102920/ch01.html#idm45252825129584)
+10. [**Integrals**](https://learning.oreilly.com/library/view/essential-math-for/9781098102920/ch01.html#idm45252825129584)
