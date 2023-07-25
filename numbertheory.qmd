@@ -70,7 +70,7 @@ print(is_prime(7))  # True
 print(is_prime(10))  # False
 ```
 
-3.  **Irrational Numbers**: An irrational number cannot be expressed as a ratio between two numbers and it does not repeat periodically. One example is the number π (pi), which Python can approximate with float. It's important to remember that due to the limitations of representing real numbers in digital computers, certain mathematical properties might not hold exactly in computer arithmetic, especially with floating-point numbers.
+3.  **Irrational Numbers**: An irrational number cannot be expressed as a ratio between two numbers and it does not repeat periodically. One example is the number $\pi$ (pi), which Python can approximate with float. It's important to remember that due to the limitations of representing real numbers in digital computers, certain mathematical properties might not hold exactly in computer arithmetic, especially with floating-point numbers.
 
 ```{python}
 import math
