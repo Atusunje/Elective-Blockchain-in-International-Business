@@ -32,15 +32,18 @@ The general learning outcome of this course is:
 
 After studying this course, you should be able to:
 
-• Relate set theory to the concept of probability
+-   Relate set theory to the concept of probability
 
-• Interpret, modify and sketch mathematical operations
+```{=html}
+<!-- -->
+```
+-   Interpret, modify and sketch mathematical operations
 
-• Compute and solve mathematical equations
+-   Compute and solve mathematical equations
 
-• Compute, manipulate, solve and plot mathematical functions
+-   Compute, manipulate, solve and plot mathematical functions
 
-• Use Python or other data science script languages
+-   Use Python or other data science script languages
 
 ## Content
 
