@@ -14,10 +14,9 @@ format:
     page-layout: full
 website:
   title: "Introduction to Math and Stats"
-  cookie-consent:
-    express: true
   navbar:
     background: primary
+    pinned: true
     left:
       - href: index.qmd
         text: Home

@@ -1,5 +1,5 @@
 ---
-title: "Exponents and Logarithms"
+title: "Exponents and Logarithms 🤔"
 jupyter: envpy39
 ---
 
@@ -11,7 +11,9 @@ Understanding exponents and logarithms is crucial for many scientific and financ
 
 **Exponents:** Exponents are mathematical operations that indicate the repeated multiplication of a base number by itself. The exponent, represented by a superscript, tells us how many times the base is multiplied by itself. Exponents are also known as powers. They play a fundamental role in mathematics and have many applications in various fields, including science, engineering, and finance.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/lZfXc4nHooo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/lZfXc4nHooo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
+
+</iframe>
 
 **Notation:** The general notation for expressing an exponent is:
 
@@ -46,10 +48,11 @@ result = 3 ** (-2)
 print(result)  # Output: 0.1111111111111111
 ```
 
-
 **Logarithms:** Logarithms are the inverse operations of exponents. They represent the power to which a given base must be raised to obtain a specific number. In simpler terms, logarithms answer the question: "What exponent should I raise the base to in order to get the desired number?"
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/Z5myJ8dg_rM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Z5myJ8dg_rM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
+
+</iframe>
 
 **Notation:** The general notation for expressing a logarithm is:
 
@@ -87,7 +90,7 @@ print(result)  # Output: 0.0
 
 **1. Compound Interest:** Compound interest calculations involve the use of exponents to determine the future value of an investment based on a given interest rate and time period.
 
-**2. Data Scaling:** In data analysis,  data scaling is a preprocessing step used in data analysis to transform data to a similar scale. It helps avoid issues caused by having features with vastly different ranges. One common method of data scaling is using logarithms to scale down large numerical values.
+**2. Data Scaling:** In data analysis, data scaling is a preprocessing step used in data analysis to transform data to a similar scale. It helps avoid issues caused by having features with vastly different ranges. One common method of data scaling is using logarithms to scale down large numerical values.
 
 Let's demonstrate data scaling with a Python code example using the `numpy` library for numerical operations and the `matplotlib` library for visualization.
 
@@ -171,8 +174,7 @@ $$
 
 $$
 = C * \sum_{n=1}^{k} \frac{1}{(1 + r)^n}
-$$
-$$
+$$ $$
 = C*\frac{1-1/(1+r)^k}{r}
 $$
 
@@ -190,7 +192,7 @@ b = (1-(1/(1+r)**5))/r
 print(a, b)
 ```
 
----
+------------------------------------------------------------------------
 
 **Assignment:** Make a short video explaining how geometric series are used in financial valuation (discounted cash flow method). Do proper research and use code demos.
 

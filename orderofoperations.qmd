@@ -1,5 +1,5 @@
 ---
-title: "Order of operations"
+title: "Order of operations 🤔"
 jupyter: envpy39
 ---
 
@@ -92,7 +92,7 @@ In the second example, we use the Pythagorean theorem to find the length of the 
 
 Understanding and following the order of operations is crucial in both mathematics and programming to avoid ambiguity and obtain accurate results. Python, along with many other programming languages, follows the standard order of operations used in mathematics.
 
----
+------------------------------------------------------------------------
 
 **Assignment:** Make a short video explaining how to calculate distances between two coordinates. Do proper research and use code demos.
 

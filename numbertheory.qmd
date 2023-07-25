@@ -1,5 +1,5 @@
 ---
-title: "Number Theory"
+title: "Number Theory 🤔"
 jupyter: envpy39
 ---
 
@@ -36,7 +36,9 @@ a = complex(2, 3)  # 2 is the real part, 3 is the imaginary part.
 b = 3 + 4j  # Another way to create a complex number.
 ```
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/muBmJWOdoOA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/muBmJWOdoOA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
+
+</iframe>
 
 Now, let's illustrate some basic number theory concepts using these Python number types.
 
