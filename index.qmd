@@ -20,7 +20,7 @@ Before starting this module make sure you have:
 
 -   a data science environment [setup](https://businessdatasolutions.github.io/datamining-course/book/setup.html){target="_blank"}
 
-In case you have not yet setup your environment you can use online notebook services like [Google Colab](https://youtu.be/inN8seMm7UI){target="_blank"} or [JupyterLab](https://jupyter.org/try-jupyter/lab/?path=notebooks%2FIntro.ipynb){target="_blank"} or [Replit](https://replit.com/){target="_blank"}
+In case you have not yet set up your environment you can use online notebook services like [Google Colab](https://youtu.be/inN8seMm7UI){target="_blank"} or [JupyterLab](https://jupyter.org/try-jupyter/lab/?path=notebooks%2FIntro.ipynb){target="_blank"} or [Replit](https://replit.com/){target="_blank"}
 :::
 :::
 
