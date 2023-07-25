@@ -12,6 +12,8 @@ format:
     theme: united
     code-fold: true
     page-layout: full
+    include-after-body:
+      scripts.html
 website:
   title: "Introduction to Math and Stats"
   navbar:
