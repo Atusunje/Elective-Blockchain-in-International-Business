@@ -13,7 +13,7 @@ See book [section](https://learning.oreilly.com/library/view/essential-math-for/
 
 Mathematical order of operations refers to the rules that dictate the sequence in which mathematical operations should be performed in an expression. These rules ensure that every mathematical expression is evaluated in a consistent and unambiguous manner. The order of operations is also known as "PEMDAS" which is an acronym representing the sequence of operations: Parentheses, Exponents, Multiplication and Division (from left to right), and Addition and Subtraction (from left to right).
 
-In Python, just like in mathematics, the order of operations is essential to obtain accurate and meaningful results. Let's break down each component of the order of operations and illustrate them with Python examples, including real-world scenarios.
+Python, along with many other programming languages, follows the standard order of operations used in mathematics. The order of operations is essential to obtain accurate and meaningful results. Let's break down each component of the order of operations and illustrate them with Python examples, including real-world scenarios.
 
 **1. Parentheses**
 
@@ -89,8 +89,6 @@ print(hypotenuse)  # Output: 10.463...
 ![](https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Pythagorean.svg/1920px-Pythagorean.svg.png){width="300"}
 
 In the second example, we use the Pythagorean theorem to find the length of the hypotenuse in a right-angled triangle. The order of operations ensures that the squares and addition are performed before the square root operation.
-
-Understanding and following the order of operations is crucial in both mathematics and programming to avoid ambiguity and obtain accurate results. Python, along with many other programming languages, follows the standard order of operations used in mathematics.
 
 ------------------------------------------------------------------------
 
