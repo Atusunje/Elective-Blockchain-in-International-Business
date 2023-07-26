@@ -105,6 +105,9 @@ print(f'Center of mass: {center_of_mass} m')
 These are just some examples. The applications of integrals are vast and extend to many other fields like electrical engineering, mechanical engineering, aerospace, and even in theoretical computer science and data science. Understanding how to apply the concept of integrals can thus provide a solid foundation for problem-solving in these disciplines.
 
 ------------------------------------------------------------------------
+
+## Assignment {.unnumbered}
+
 ${f(x)={\frac {1}{\sigma {\sqrt {2\pi }}}}e^{-{\frac {1}{2}}\left({\frac {x-\mu }{\sigma }}\right)^{2}}}$
 
 ```{python}
@@ -132,9 +135,7 @@ f = my_function(x)
 x_area = np.linspace(a, b, 1000)
 f_area = lambdify(x, f)(x_area)
 plot(f, xlim=(-5, 5), fill={'x': x_area,'y1':f_area,'color':'tomato'})
-```
 
-```{python}
 def integral_function(x):
     mu = 0
     sigma = 1
@@ -146,7 +147,7 @@ print(area) # prints
 ```
 
 
-**Assignment:** Make a short video discussing the relationship between integrals and statistics.
+**Basic:** Make a short video discussing the relationship between integrals and statistics.
 
 **Stretch:** Expand your video showcasing the various applications related to your field of study.
 

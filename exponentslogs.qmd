@@ -193,8 +193,9 @@ print(a, b)
 ```
 
 ------------------------------------------------------------------------
+## Assignment {.unnumbered}
 
-**Assignment:** Make a short video explaining how geometric series are used in financial valuation (discounted cash flow method). Do proper research and use code demos.
+**basic:** Make a short video explaining how geometric series are used in financial valuation (discounted cash flow method). Do proper research and use code demos.
 
 **Stretch:** Expand your video with an example of valuing the stock of a listed company. Compare your result with the actual market price and discuss the differences. Illustrate with code examples and charts. Provide a list of interesting resources on the matter.
 

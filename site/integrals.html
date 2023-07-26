@@ -159,11 +159,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#assignment" id="toc-assignment" class="nav-link active" data-scroll-target="#assignment">Assignment</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
-<main class="content column-page" id="quarto-document-content">
+<main class="content column-page-left" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
@@ -293,6 +299,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p><strong>7. Algorithm Analysis</strong>: Integrals can be used to analyze algorithms that work with continuous data or where the performance of the algorithm changes continuously with the input size. An integral can provide the average case performance of such an algorithm.</p>
 <p>These are just some examples. The applications of integrals are vast and extend to many other fields like electrical engineering, mechanical engineering, aerospace, and even in theoretical computer science and data science. Understanding how to apply the concept of integrals can thus provide a solid foundation for problem-solving in these disciplines.</p>
 <hr>
+<section id="assignment" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="assignment">Assignment</h2>
 <p><span class="math inline">\({f(x)={\frac {1}{\sigma {\sqrt {2\pi }}}}e^{-{\frac {1}{2}}\left({\frac {x-\mu }{\sigma }}\right)^{2}}}\)</span></p>
 <div class="cell" data-execution_count="4">
 <details>
@@ -320,36 +328,30 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb6-21"><a href="#cb6-21" aria-hidden="true" tabindex="-1"></a>f <span class="op">=</span> my_function(x)</span>
 <span id="cb6-22"><a href="#cb6-22" aria-hidden="true" tabindex="-1"></a>x_area <span class="op">=</span> np.linspace(a, b, <span class="dv">1000</span>)</span>
 <span id="cb6-23"><a href="#cb6-23" aria-hidden="true" tabindex="-1"></a>f_area <span class="op">=</span> lambdify(x, f)(x_area)</span>
-<span id="cb6-24"><a href="#cb6-24" aria-hidden="true" tabindex="-1"></a>plot(f, xlim<span class="op">=</span>(<span class="op">-</span><span class="dv">5</span>, <span class="dv">5</span>), fill<span class="op">=</span>{<span class="st">'x'</span>: x_area,<span class="st">'y1'</span>:f_area,<span class="st">'color'</span>:<span class="st">'tomato'</span>})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb6-24"><a href="#cb6-24" aria-hidden="true" tabindex="-1"></a>plot(f, xlim<span class="op">=</span>(<span class="op">-</span><span class="dv">5</span>, <span class="dv">5</span>), fill<span class="op">=</span>{<span class="st">'x'</span>: x_area,<span class="st">'y1'</span>:f_area,<span class="st">'color'</span>:<span class="st">'tomato'</span>})</span>
+<span id="cb6-25"><a href="#cb6-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-26"><a href="#cb6-26" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> integral_function(x):</span>
+<span id="cb6-27"><a href="#cb6-27" aria-hidden="true" tabindex="-1"></a>    mu <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb6-28"><a href="#cb6-28" aria-hidden="true" tabindex="-1"></a>    sigma <span class="op">=</span> <span class="dv">1</span></span>
+<span id="cb6-29"><a href="#cb6-29" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span>(my_function(x, mu, sigma))</span>
+<span id="cb6-30"><a href="#cb6-30" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb6-31"><a href="#cb6-31" aria-hidden="true" tabindex="-1"></a>area <span class="op">=</span> approximate_integral(a<span class="op">=-</span><span class="dv">1</span>, b<span class="op">=</span><span class="dv">1</span>, n<span class="op">=</span><span class="dv">1000</span>, f<span class="op">=</span>integral_function)</span>
+<span id="cb6-32"><a href="#cb6-32" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-33"><a href="#cb6-33" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(area) <span class="co"># prints </span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-display">
 <p><img src="integrals_files/figure-html/cell-5-output-1.png" width="662" height="468"></p>
 </div>
-<div class="cell-output cell-output-display" data-execution_count="4">
-<pre><code>&lt;sympy.plotting.plot.Plot at 0x143a605b0&gt;</code></pre>
-</div>
-</div>
-<div class="cell" data-execution_count="5">
-<details>
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> integral_function(x):</span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>    mu <span class="op">=</span> <span class="dv">0</span></span>
-<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>    sigma <span class="op">=</span> <span class="dv">1</span></span>
-<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span>(my_function(x, mu, sigma))</span>
-<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>area <span class="op">=</span> approximate_integral(a<span class="op">=-</span><span class="dv">1</span>, b<span class="op">=</span><span class="dv">1</span>, n<span class="op">=</span><span class="dv">1000</span>, f<span class="op">=</span>integral_function)</span>
-<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(area) <span class="co"># prints </span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
 <div class="cell-output cell-output-stdout">
 <pre><code>0.682689572794013</code></pre>
 </div>
 </div>
-<p><strong>Assignment:</strong> Make a short video discussing the relationship between integrals and statistics.</p>
+<p><strong>Basic:</strong> Make a short video discussing the relationship between integrals and statistics.</p>
 <p><strong>Stretch:</strong> Expand your video showcasing the various applications related to your field of study.</p>
 <p><strong>Challenge:</strong> Share your content online (e.g.&nbsp;Linkedin or Medium), gather feedback and write a reflection on it.</p>
 
 
+</section>
 
 </main> <!-- /main -->
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
