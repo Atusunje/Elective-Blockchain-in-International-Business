@@ -144,6 +144,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <a class="nav-link" href="./exponentslogs.html" rel="" target="">
  <span class="menu-text">Exponents and Logarithms 🤔</span></a>
   </li>  
+  <li class="nav-item">
+    <a class="nav-link active" href="./integrals.html" rel="" target="" aria-current="page">
+ <span class="menu-text">Integrals 🤔</span></a>
+  </li>  
 </ul>
             <div class="quarto-navbar-tools ms-auto">
 </div>
@@ -184,90 +188,161 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 </header>
 
-<p>See book <a href="https://learning.oreilly.com/library/view/essential-math-for/9781098102920/ch01.html#idm45252818933376" target="_blank">section</a></p>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/-QHff5pRdM8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="">
+<p>See book <a href="https://learning.oreilly.com/library/view/essential-math-for/9781098102920/ch01.html#idm45252825129584" target="_blank">section</a></p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/rfG8ce4nNh0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="">
 </iframe>
+<p>Integrals in calculus can be a challenging concept to grasp, but they can also be a powerful tool for solving various problems in business management and engineering. Integrals can be used to calculate quantities such as total cost, total revenue, and consumer surplus, among others. They are also essential in modeling and analyzing time-dependent phenomena in financial markets, operations management, logistics, and so on.</p>
+<p><strong>Understanding Integrals</strong></p>
+<p>In simple terms, an integral can be seen as the “opposite” of a derivative. If a derivative gives you the rate of change at a certain point, an integral gives you the total accumulation over a certain range.</p>
+<p>Imagine you own a factory, and you produce goods at a certain rate per day. This production rate can vary from day to day. If you wanted to know the total goods produced in a month, you could sum up the daily production rates. In the world of calculus, this summing process is analogous to an integral.</p>
+<p>Now, let’s illustrate the concept of the integral using Python. We’ll use the library <code>scipy</code>, which provides functions for numerical integration. First, let’s define a simple function to represent the rate of goods production per day.</p>
 <div class="cell" data-execution_count="1">
 <details>
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> approximate_integral(a, b, n, f):</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    delta_x <span class="op">=</span> (b <span class="op">-</span> a) <span class="op">/</span> n</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    total_sum <span class="op">=</span> <span class="dv">0</span></span>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> scipy.integrate <span class="im">import</span> quad</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">1</span>, n <span class="op">+</span> <span class="dv">1</span>):</span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>        midpoint <span class="op">=</span> <span class="fl">0.5</span> <span class="op">*</span> (<span class="dv">2</span> <span class="op">*</span> a <span class="op">+</span> delta_x <span class="op">*</span> (<span class="dv">2</span> <span class="op">*</span> i <span class="op">-</span> <span class="dv">1</span>))</span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>        total_sum <span class="op">+=</span> f(midpoint)</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="co"># This is our production rate function</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> production_rate(t):</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> (<span class="dv">100</span> <span class="op">+</span> <span class="dv">30</span><span class="op">*</span>np.sin(t))</span>
 <span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> total_sum <span class="op">*</span> delta_x</span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> my_function(x):</span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> x<span class="op">**</span><span class="dv">2</span> <span class="op">+</span> <span class="dv">1</span></span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>area <span class="op">=</span> approximate_integral(a<span class="op">=</span><span class="dv">0</span>, b<span class="op">=</span><span class="dv">1</span>, n<span class="op">=</span><span class="dv">5</span>, f<span class="op">=</span>my_function)</span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(area) <span class="co"># prints 1.33</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>t <span class="op">=</span> np.linspace(<span class="dv">0</span>, <span class="dv">30</span>, <span class="dv">300</span>)</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>ft <span class="op">=</span> production_rate(t)</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>g <span class="op">=</span> np.zeros(ft.shape)</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>plt.close()</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>plt.xlim(<span class="dv">0</span>, <span class="dv">35</span>)</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>plt.ylim(<span class="dv">0</span>, <span class="dv">135</span>)</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>plt.plot(t, ft)</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
-<div class="cell-output cell-output-stdout">
-<pre><code>1.33</code></pre>
+<div class="cell-output cell-output-display">
+<p><img src="integrals_files/figure-html/cell-2-output-1.png" width="583" height="411"></p>
 </div>
 </div>
-<p><span class="math inline">\({f(x)={\frac {1}{\sigma {\sqrt {2\pi }}}}e^{-{\frac {1}{2}}\left({\frac {x-\mu }{\sigma }}\right)^{2}}}\)</span></p>
+<p>The function <code>production_rate(t)</code> is a somewhat arbitrary function representing the rate of goods production for each day <code>t</code>. It’s assumed that the production rate varies in a sinusoidal manner around a baseline of 100 units/day, to mimic the variations in production you might encounter in a real factory.</p>
+<p>Now, we can compute the total goods produced over a month (let’s approximate a month as 30 days). We use the <code>quad</code> function from <code>scipy.integrate</code>, which performs numerical integration.</p>
 <div class="cell" data-execution_count="2">
 <details>
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sympy <span class="im">import</span> <span class="op">*</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> math</span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> approximate_integral(a, b, n, f):</span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>    delta_x <span class="op">=</span> (b <span class="op">-</span> a) <span class="op">/</span> n</span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>    total_sum <span class="op">=</span> <span class="dv">0</span></span>
-<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">1</span>, n <span class="op">+</span> <span class="dv">1</span>):</span>
-<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>        midpoint <span class="op">=</span> <span class="fl">0.5</span> <span class="op">*</span> (<span class="dv">2</span> <span class="op">*</span> a <span class="op">+</span> delta_x <span class="op">*</span> (<span class="dv">2</span> <span class="op">*</span> i <span class="op">-</span> <span class="dv">1</span>))</span>
-<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>        total_sum <span class="op">+=</span> f(midpoint)</span>
-<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> total_sum <span class="op">*</span> delta_x</span>
-<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> my_function(x, mu<span class="op">=</span><span class="dv">0</span>, sigma<span class="op">=</span><span class="dv">1</span>):</span>
-<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>    l <span class="op">=</span> <span class="dv">1</span><span class="op">/</span>(sigma<span class="op">*</span>(<span class="dv">2</span><span class="op">*</span>math.pi)<span class="op">**</span><span class="fl">0.5</span>)</span>
-<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>    r <span class="op">=</span> <span class="op">-</span><span class="fl">0.5</span><span class="op">*</span>((x <span class="op">-</span> mu) <span class="op">/</span> sigma)<span class="op">**</span><span class="dv">2</span></span>
-<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> l<span class="op">*</span>exp(r)</span>
-<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a>a<span class="op">=-</span><span class="dv">1</span></span>
-<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a>b<span class="op">=</span><span class="dv">1</span></span>
-<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> symbols(<span class="st">'x'</span>)</span>
-<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a>f <span class="op">=</span> my_function(x)</span>
-<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a>x_area <span class="op">=</span> np.linspace(a, b, <span class="dv">1000</span>)</span>
-<span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a>f_area <span class="op">=</span> lambdify(x, f)(x_area)</span>
-<span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a>plot(f, xlim<span class="op">=</span>(<span class="op">-</span><span class="dv">5</span>, <span class="dv">5</span>), fill<span class="op">=</span>{<span class="st">'x'</span>: x_area,<span class="st">'y1'</span>:f_area,<span class="st">'color'</span>:<span class="st">'tomato'</span>})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>plt.close()</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>plt.xlim(<span class="dv">0</span>, <span class="dv">35</span>)</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>plt.ylim(<span class="dv">0</span>, <span class="dv">135</span>)</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>plt.plot(t, ft, t, g)</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>plt.fill_between(t, ft, g, color<span class="op">=</span><span class="st">"tomato"</span>)</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>plt.show()</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>total_production, error <span class="op">=</span> quad(production_rate, <span class="dv">0</span>, <span class="dv">30</span>)</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f'Total production over 30 days: </span><span class="sc">{</span>total_production<span class="sc">}</span><span class="ss"> units'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-display">
-<p><img src="integrals_files/figure-html/cell-3-output-1.png" width="662" height="468"></p>
+<p><img src="integrals_files/figure-html/cell-3-output-1.png" width="583" height="411"></p>
 </div>
-<div class="cell-output cell-output-display" data-execution_count="2">
-<pre><code>&lt;sympy.plotting.plot.Plot at 0x12a2e5460&gt;</code></pre>
+<div class="cell-output cell-output-stdout">
+<pre><code>Total production over 30 days: 3025.3724565033726 units</code></pre>
 </div>
 </div>
+<p><strong>Real-World Applications</strong></p>
+<p><strong>1. Economics and Finance:</strong> Integrals are used in economics and finance to calculate areas under curves. For instance, in a supply and demand graph, the area between the supply and demand curves up to the market price line is called the consumer surplus, which can be calculated using integrals. Similarly, the area under a company’s revenue or cost function gives the total revenue or total cost, respectively.</p>
+<p><strong>2. Operations Management:</strong> In the field of operations management, integrals can be used to model and analyze continuous production processes. If a factory’s production rate is represented by a function of time, the integral of that function over a given time period gives the total production.</p>
+<p><strong>3. Logistics:</strong> In logistics and supply chain management, integrals can be used to calculate total transportation costs, total inventory held over time, and other cumulative quantities.</p>
+<p>In summary, while calculus and specifically integrals might seem daunting, they are fundamental mathematical tools in various business scenarios. Understanding how they work and being able to apply them can be a valuable asset for a business management professional.</p>
+<p>Absolutely! Let’s explore how integrals can be used in the fields of engineering and software development.</p>
+<p><strong>4. Civil Engineering</strong>: Civil engineers use integrals when calculating the load distribution on beams, the moment of inertia, and when determining the stress and strain on various materials.</p>
+<p>For example, to calculate the center of mass of an irregularly shaped object, engineers would use calculus and specifically the concept of integration.</p>
 <div class="cell" data-execution_count="3">
 <details>
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> integral_function(x):</span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>    mu <span class="op">=</span> <span class="dv">0</span></span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>    sigma <span class="op">=</span> <span class="dv">1</span></span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span>(my_function(x, mu, sigma))</span>
-<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>area <span class="op">=</span> approximate_integral(a<span class="op">=-</span><span class="dv">1</span>, b<span class="op">=</span><span class="dv">1</span>, n<span class="op">=</span><span class="dv">1000</span>, f<span class="op">=</span>integral_function)</span>
-<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(area) <span class="co"># prints </span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> scipy.integrate <span class="im">import</span> quad</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Assume an object's mass distribution along the x-axis is given by the function:</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> mass_distribution(x):</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> x<span class="op">**</span><span class="dv">2</span> <span class="op">+</span> <span class="dv">3</span><span class="op">*</span>x <span class="op">+</span> <span class="dv">1</span>  <span class="co"># Arbitrary function for illustrative purposes.</span></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a><span class="co"># We want to find the center of mass of this object over the interval from 0 to 2 meters.</span></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>x_values <span class="op">=</span> np.linspace(<span class="dv">0</span>, <span class="dv">2</span>, <span class="dv">100</span>)</span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>mass_values <span class="op">=</span> mass_distribution(x_values)</span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculate total mass:</span></span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>total_mass, _ <span class="op">=</span> quad(mass_distribution, <span class="dv">0</span>, <span class="dv">2</span>)</span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a><span class="co"># Now calculate x-coordinate of the center of mass:</span></span>
+<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> integrand(x):</span>
+<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> x <span class="op">*</span> mass_distribution(x)  <span class="co"># This is x * dm(x).</span></span>
+<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a>center_of_mass, _ <span class="op">=</span> quad(integrand, <span class="dv">0</span>, <span class="dv">2</span>)</span>
+<span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a>center_of_mass <span class="op">/=</span> total_mass</span>
+<span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-22"><a href="#cb4-22" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f'Center of mass: </span><span class="sc">{</span>center_of_mass<span class="sc">}</span><span class="ss"> m'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>Center of mass: 1.3125 m</code></pre>
+</div>
+</div>
+<p><strong>5. Computer Graphics</strong>: Integrals are used extensively in computer graphics, especially in rendering. When calculating the lighting of a point, we would integrate over all possible light paths that can reach the point. This is the basis for techniques like ray tracing and radiosity.</p>
+<p><strong>6. Machine Learning</strong>: Many machine learning algorithms, especially those in deep learning, involve optimization of continuous functions. The process of training a neural network, for instance, involves performing gradient descent on the cost function, which is an integral over the entire training set.</p>
+<p><strong>7. Algorithm Analysis</strong>: Integrals can be used to analyze algorithms that work with continuous data or where the performance of the algorithm changes continuously with the input size. An integral can provide the average case performance of such an algorithm.</p>
+<p>These are just some examples. The applications of integrals are vast and extend to many other fields like electrical engineering, mechanical engineering, aerospace, and even in theoretical computer science and algorithm analysis. Understanding how to apply the concept of integrals can thus provide a solid foundation for problem-solving in these disciplines.</p>
+<hr>
+<p><span class="math inline">\({f(x)={\frac {1}{\sigma {\sqrt {2\pi }}}}e^{-{\frac {1}{2}}\left({\frac {x-\mu }{\sigma }}\right)^{2}}}\)</span></p>
+<div class="cell" data-execution_count="4">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sympy <span class="im">import</span> <span class="op">*</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> math</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> approximate_integral(a, b, n, f):</span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>    delta_x <span class="op">=</span> (b <span class="op">-</span> a) <span class="op">/</span> n</span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>    total_sum <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">1</span>, n <span class="op">+</span> <span class="dv">1</span>):</span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>        midpoint <span class="op">=</span> <span class="fl">0.5</span> <span class="op">*</span> (<span class="dv">2</span> <span class="op">*</span> a <span class="op">+</span> delta_x <span class="op">*</span> (<span class="dv">2</span> <span class="op">*</span> i <span class="op">-</span> <span class="dv">1</span>))</span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>        total_sum <span class="op">+=</span> f(midpoint)</span>
+<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> total_sum <span class="op">*</span> delta_x</span>
+<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> my_function(x, mu<span class="op">=</span><span class="dv">0</span>, sigma<span class="op">=</span><span class="dv">1</span>):</span>
+<span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a>    l <span class="op">=</span> <span class="dv">1</span><span class="op">/</span>(sigma<span class="op">*</span>(<span class="dv">2</span><span class="op">*</span>math.pi)<span class="op">**</span><span class="fl">0.5</span>)</span>
+<span id="cb6-17"><a href="#cb6-17" aria-hidden="true" tabindex="-1"></a>    r <span class="op">=</span> <span class="op">-</span><span class="fl">0.5</span><span class="op">*</span>((x <span class="op">-</span> mu) <span class="op">/</span> sigma)<span class="op">**</span><span class="dv">2</span></span>
+<span id="cb6-18"><a href="#cb6-18" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> l<span class="op">*</span>exp(r)</span>
+<span id="cb6-19"><a href="#cb6-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-20"><a href="#cb6-20" aria-hidden="true" tabindex="-1"></a>a<span class="op">=-</span><span class="dv">1</span></span>
+<span id="cb6-21"><a href="#cb6-21" aria-hidden="true" tabindex="-1"></a>b<span class="op">=</span><span class="dv">1</span></span>
+<span id="cb6-22"><a href="#cb6-22" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> symbols(<span class="st">'x'</span>)</span>
+<span id="cb6-23"><a href="#cb6-23" aria-hidden="true" tabindex="-1"></a>f <span class="op">=</span> my_function(x)</span>
+<span id="cb6-24"><a href="#cb6-24" aria-hidden="true" tabindex="-1"></a>x_area <span class="op">=</span> np.linspace(a, b, <span class="dv">1000</span>)</span>
+<span id="cb6-25"><a href="#cb6-25" aria-hidden="true" tabindex="-1"></a>f_area <span class="op">=</span> lambdify(x, f)(x_area)</span>
+<span id="cb6-26"><a href="#cb6-26" aria-hidden="true" tabindex="-1"></a>plot(f, xlim<span class="op">=</span>(<span class="op">-</span><span class="dv">5</span>, <span class="dv">5</span>), fill<span class="op">=</span>{<span class="st">'x'</span>: x_area,<span class="st">'y1'</span>:f_area,<span class="st">'color'</span>:<span class="st">'tomato'</span>})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-display">
+<p><img src="integrals_files/figure-html/cell-5-output-1.png" width="662" height="468"></p>
+</div>
+<div class="cell-output cell-output-display" data-execution_count="14">
+<pre><code>&lt;sympy.plotting.plot.Plot at 0x126afd1c0&gt;</code></pre>
+</div>
+</div>
+<div class="cell" data-execution_count="5">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> integral_function(x):</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>    mu <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>    sigma <span class="op">=</span> <span class="dv">1</span></span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span>(my_function(x, mu, sigma))</span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>area <span class="op">=</span> approximate_integral(a<span class="op">=-</span><span class="dv">1</span>, b<span class="op">=</span><span class="dv">1</span>, n<span class="op">=</span><span class="dv">1000</span>, f<span class="op">=</span>integral_function)</span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(area) <span class="co"># prints </span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>0.682689572794013</code></pre>
 </div>
 </div>
-<hr>
-<p><strong>Assignment:</strong> Make a short video explaining how factorization and prime numbers are used for encryption. Do proper research and use code demos.</p>
-<p><strong>Stretch:</strong> Expand your video with an exploration of the current state of quantum computing and it’s expected evolution. Discuss and illustrate the implications for current encryption methodologies. Provide a list of interesting resources on the matter.</p>
+<p><strong>Assignment:</strong> Make a short video discussing the relationship between integrals and statistics.</p>
+<p><strong>Stretch:</strong> Expand your video showcasing the various applications related to your field of study.</p>
 <p><strong>Challenge:</strong> Share your content online (e.g.&nbsp;Linkedin or Medium), gather feedback and write a reflection on it.</p>
 
 

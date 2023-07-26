@@ -34,9 +34,8 @@ After studying this course, you should be able to:
 
 -   Relate set theory to the concept of probability
 
-```{=html}
 <!-- -->
-```
+
 -   Interpret, modify and sketch mathematical operations
 
 -   Compute and solve mathematical equations
@@ -75,4 +74,4 @@ In weeks 1 and 2 you'll be learning the following topics (sections marked with ð
 
     2.  [**The Chain Rule**](https://learning.oreilly.com/library/view/essential-math-for/9781098102920/ch01.html#idm45252825380896)
 
-10. [**Integrals**](https://learning.oreilly.com/library/view/essential-math-for/9781098102920/ch01.html#idm45252825129584)
+10. [**Integrals**](integrals.html)

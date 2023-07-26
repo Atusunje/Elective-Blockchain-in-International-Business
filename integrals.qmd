@@ -3,31 +3,107 @@ title: "Integrals 🤔"
 jupyter: envpy39
 ---
 
-See book [section](https://learning.oreilly.com/library/view/essential-math-for/9781098102920/ch01.html#idm45252818933376){target="_blank"}
+See book [section](https://learning.oreilly.com/library/view/essential-math-for/9781098102920/ch01.html#idm45252825129584){target="_blank"}
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/-QHff5pRdM8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/rfG8ce4nNh0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-</iframe>
+Integrals in calculus can be a challenging concept to grasp, but they can also be a powerful tool for solving various problems in business management and engineering. Integrals can be used to calculate quantities such as total cost, total revenue, and consumer surplus, among others. They are also essential in modeling and analyzing time-dependent phenomena in financial markets, operations management, logistics, and so on.
+
+**Understanding Integrals**
+
+In simple terms, an integral can be seen as the "opposite" of a derivative. If a derivative gives you the rate of change at a certain point, an integral gives you the total accumulation over a certain range.
+
+Imagine you own a factory, and you produce goods at a certain rate per day. This production rate can vary from day to day. If you wanted to know the total goods produced in a month, you could sum up the daily production rates. In the world of calculus, this summing process is analogous to an integral.
+
+Now, let's illustrate the concept of the integral using Python. We'll use the library `scipy`, which provides functions for numerical integration. First, let's define a simple function to represent the rate of goods production per day.
 
 ```{python}
-def approximate_integral(a, b, n, f):
-    delta_x = (b - a) / n
-    total_sum = 0
+import numpy as np
+from scipy.integrate import quad
+import matplotlib.pyplot as plt
 
-    for i in range(1, n + 1):
-        midpoint = 0.5 * (2 * a + delta_x * (2 * i - 1))
-        total_sum += f(midpoint)
+# This is our production rate function
+def production_rate(t):
+    return (100 + 30*np.sin(t))
 
-    return total_sum * delta_x
+t = np.linspace(0, 30, 300)
+ft = production_rate(t)
+g = np.zeros(ft.shape)
 
-def my_function(x):
-    return x**2 + 1
-
-area = approximate_integral(a=0, b=1, n=5, f=my_function)
-
-print(area) # prints 1.33
+plt.close()
+plt.xlim(0, 35)
+plt.ylim(0, 135)
+plt.plot(t, ft)
+plt.show()
 ```
 
+The function `production_rate(t)` is a somewhat arbitrary function representing the rate of goods production for each day `t`. It's assumed that the production rate varies in a sinusoidal manner around a baseline of 100 units/day, to mimic the variations in production you might encounter in a real factory.
+
+Now, we can compute the total goods produced over a month (let's approximate a month as 30 days). We use the `quad` function from `scipy.integrate`, which performs numerical integration.
+
+```{python}
+plt.close()
+plt.xlim(0, 35)
+plt.ylim(0, 135)
+plt.plot(t, ft, t, g)
+plt.fill_between(t, ft, g, color="tomato")
+plt.show()
+
+total_production, error = quad(production_rate, 0, 30)
+
+print(f'Total production over 30 days: {total_production} units')
+```
+
+**Real-World Applications**
+
+**1. Economics and Finance:** Integrals are used in economics and finance to calculate areas under curves. For instance, in a supply and demand graph, the area between the supply and demand curves up to the market price line is called the consumer surplus, which can be calculated using integrals. Similarly, the area under a company's revenue or cost function gives the total revenue or total cost, respectively.
+
+**2. Operations Management:** In the field of operations management, integrals can be used to model and analyze continuous production processes. If a factory's production rate is represented by a function of time, the integral of that function over a given time period gives the total production.
+
+**3. Logistics:** In logistics and supply chain management, integrals can be used to calculate total transportation costs, total inventory held over time, and other cumulative quantities.
+
+In summary, while calculus and specifically integrals might seem daunting, they are fundamental mathematical tools in various business scenarios. Understanding how they work and being able to apply them can be a valuable asset for a business management professional.
+
+Absolutely! Let's explore how integrals can be used in the fields of engineering and software development.
+
+**4. Civil Engineering**: Civil engineers use integrals when calculating the load distribution on beams, the moment of inertia, and when determining the stress and strain on various materials.
+
+For example, to calculate the center of mass of an irregularly shaped object, engineers would use calculus and specifically the concept of integration.
+
+```{python}
+import numpy as np
+from scipy.integrate import quad
+
+# Assume an object's mass distribution along the x-axis is given by the function:
+def mass_distribution(x):
+    return x**2 + 3*x + 1  # Arbitrary function for illustrative purposes.
+
+# We want to find the center of mass of this object over the interval from 0 to 2 meters.
+x_values = np.linspace(0, 2, 100)
+mass_values = mass_distribution(x_values)
+
+# Calculate total mass:
+total_mass, _ = quad(mass_distribution, 0, 2)
+
+# Now calculate x-coordinate of the center of mass:
+def integrand(x):
+    return x * mass_distribution(x)  # This is x * dm(x).
+
+center_of_mass, _ = quad(integrand, 0, 2)
+center_of_mass /= total_mass
+
+print(f'Center of mass: {center_of_mass} m')
+```
+
+**5. Computer Graphics**: Integrals are used extensively in computer graphics, especially in rendering. When calculating the lighting of a point, we would integrate over all possible light paths that can reach the point. This is the basis for techniques like ray tracing and radiosity.
+
+**6. Machine Learning**: Many machine learning algorithms, especially those in deep learning, involve optimization of continuous functions. The process of training a neural network, for instance, involves performing gradient descent on the cost function, which is an integral over the entire training set.
+
+**7. Algorithm Analysis**: Integrals can be used to analyze algorithms that work with continuous data or where the performance of the algorithm changes continuously with the input size. An integral can provide the average case performance of such an algorithm.
+
+These are just some examples. The applications of integrals are vast and extend to many other fields like electrical engineering, mechanical engineering, aerospace, and even in theoretical computer science and algorithm analysis. Understanding how to apply the concept of integrals can thus provide a solid foundation for problem-solving in these disciplines.
+
+------------------------------------------------------------------------
 ${f(x)={\frac {1}{\sigma {\sqrt {2\pi }}}}e^{-{\frac {1}{2}}\left({\frac {x-\mu }{\sigma }}\right)^{2}}}$
 
 ```{python}
@@ -70,10 +146,9 @@ area = approximate_integral(a=-1, b=1, n=1000, f=integral_function)
 print(area) # prints 
 ```
 
-------------------------------------------------------------------------
 
-**Assignment:** Make a short video explaining how factorization and prime numbers are used for encryption. Do proper research and use code demos.
+**Assignment:** Make a short video discussing the relationship between integrals and statistics.
 
-**Stretch:** Expand your video with an exploration of the current state of quantum computing and it's expected evolution. Discuss and illustrate the implications for current encryption methodologies. Provide a list of interesting resources on the matter.
+**Stretch:** Expand your video showcasing the various applications related to your field of study.
 
 **Challenge:** Share your content online (e.g. Linkedin or Medium), gather feedback and write a reflection on it.
