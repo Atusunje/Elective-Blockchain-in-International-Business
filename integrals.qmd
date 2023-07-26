@@ -62,10 +62,6 @@ print(f'Total production over 30 days: {total_production} units')
 
 **3. Logistics:** In logistics and supply chain management, integrals can be used to calculate total transportation costs, total inventory held over time, and other cumulative quantities.
 
-In summary, while calculus and specifically integrals might seem daunting, they are fundamental mathematical tools in various business scenarios. Understanding how they work and being able to apply them can be a valuable asset for a business management professional.
-
-Absolutely! Let's explore how integrals can be used in the fields of engineering and software development.
-
 **4. Civil Engineering**: Civil engineers use integrals when calculating the load distribution on beams, the moment of inertia, and when determining the stress and strain on various materials.
 
 For example, to calculate the center of mass of an irregularly shaped object, engineers would use calculus and specifically the concept of integration.
@@ -101,7 +97,7 @@ print(f'Center of mass: {center_of_mass} m')
 
 **7. Algorithm Analysis**: Integrals can be used to analyze algorithms that work with continuous data or where the performance of the algorithm changes continuously with the input size. An integral can provide the average case performance of such an algorithm.
 
-These are just some examples. The applications of integrals are vast and extend to many other fields like electrical engineering, mechanical engineering, aerospace, and even in theoretical computer science and algorithm analysis. Understanding how to apply the concept of integrals can thus provide a solid foundation for problem-solving in these disciplines.
+These are just some examples. The applications of integrals are vast and extend to many other fields like electrical engineering, mechanical engineering, aerospace, and even in theoretical computer science and data science. Understanding how to apply the concept of integrals can thus provide a solid foundation for problem-solving in these disciplines.
 
 ------------------------------------------------------------------------
 ${f(x)={\frac {1}{\sigma {\sqrt {2\pi }}}}e^{-{\frac {1}{2}}\left({\frac {x-\mu }{\sigma }}\right)^{2}}}$
