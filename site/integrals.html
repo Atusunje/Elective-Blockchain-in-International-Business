@@ -253,31 +253,39 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="cell" data-execution_count="3">
 <details>
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> scipy.integrate <span class="im">import</span> quad</span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Assume an object's mass distribution along the x-axis is given by the function:</span></span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> mass_distribution(x):</span>
-<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> x<span class="op">**</span><span class="dv">2</span> <span class="op">+</span> <span class="dv">3</span><span class="op">*</span>x <span class="op">+</span> <span class="dv">1</span>  <span class="co"># Arbitrary function for illustrative purposes.</span></span>
-<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a><span class="co"># We want to find the center of mass of this object over the interval from 0 to 2 meters.</span></span>
-<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>x_values <span class="op">=</span> np.linspace(<span class="dv">0</span>, <span class="dv">2</span>, <span class="dv">100</span>)</span>
-<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>mass_values <span class="op">=</span> mass_distribution(x_values)</span>
-<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculate total mass:</span></span>
-<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>total_mass, _ <span class="op">=</span> quad(mass_distribution, <span class="dv">0</span>, <span class="dv">2</span>)</span>
-<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a><span class="co"># Now calculate x-coordinate of the center of mass:</span></span>
-<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> integrand(x):</span>
-<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> x <span class="op">*</span> mass_distribution(x)  <span class="co"># This is x * dm(x).</span></span>
-<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a>center_of_mass, _ <span class="op">=</span> quad(integrand, <span class="dv">0</span>, <span class="dv">2</span>)</span>
-<span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a>center_of_mass <span class="op">/=</span> total_mass</span>
-<span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-22"><a href="#cb4-22" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f'Center of mass: </span><span class="sc">{</span>center_of_mass<span class="sc">}</span><span class="ss"> m'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sympy <span class="im">import</span> <span class="op">*</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Assume an object's mass distribution along the x-axis is given by the function:</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> mass_distribution(x):</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> x<span class="op">**</span><span class="dv">2</span> <span class="op">+</span> <span class="dv">6</span><span class="op">*</span>x <span class="op">+</span> <span class="dv">9</span>  <span class="co"># Arbitrary function for illustrative purposes.</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a><span class="co"># We want to find the center of mass of this object over the interval from 0 to 2 meters.</span></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>x_values <span class="op">=</span> np.linspace(<span class="dv">0</span>, <span class="dv">2</span>, <span class="dv">100</span>)</span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>mass_values <span class="op">=</span> mass_distribution(x_values)</span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> symbols(<span class="st">'x'</span>)</span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>f <span class="op">=</span> mass_distribution(x)</span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>x_area <span class="op">=</span> np.linspace(<span class="dv">0</span>, <span class="dv">2</span>, <span class="dv">100</span>)</span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>f_area <span class="op">=</span> lambdify(x, f)(x_area)</span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a>plot(f, xlim<span class="op">=</span>(<span class="op">-</span><span class="dv">5</span>, <span class="dv">5</span>), ylim<span class="op">=</span>(<span class="dv">0</span>, <span class="dv">80</span>), fill<span class="op">=</span>{<span class="st">'x'</span>: x_area,<span class="st">'y1'</span>:f_area,<span class="st">'color'</span>:<span class="st">'tomato'</span>})</span>
+<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculate total mass:</span></span>
+<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a>total_mass, _ <span class="op">=</span> quad(mass_distribution, <span class="dv">0</span>, <span class="dv">2</span>)</span>
+<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a><span class="co"># Now calculate x-coordinate of the center of mass:</span></span>
+<span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> integrand(x):</span>
+<span id="cb4-22"><a href="#cb4-22" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> x <span class="op">*</span> mass_distribution(x)  <span class="co"># This is x * dm(x).</span></span>
+<span id="cb4-23"><a href="#cb4-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-24"><a href="#cb4-24" aria-hidden="true" tabindex="-1"></a>center_of_mass, _ <span class="op">=</span> quad(integrand, <span class="dv">0</span>, <span class="dv">2</span>)</span>
+<span id="cb4-25"><a href="#cb4-25" aria-hidden="true" tabindex="-1"></a>center_of_mass <span class="op">/=</span> total_mass</span>
+<span id="cb4-26"><a href="#cb4-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-27"><a href="#cb4-27" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f'Center of mass: </span><span class="sc">{</span>center_of_mass<span class="sc">}</span><span class="ss"> m'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
+<div class="cell-output cell-output-display">
+<p><img src="integrals_files/figure-html/cell-4-output-1.png" width="662" height="470"></p>
+</div>
 <div class="cell-output cell-output-stdout">
-<pre><code>Center of mass: 1.3125 m</code></pre>
+<pre><code>Center of mass: 1.1632653061224485 m</code></pre>
 </div>
 </div>
 <p><strong>5. Computer Graphics</strong>: Integrals are used extensively in computer graphics, especially in rendering. When calculating the lighting of a point, we would integrate over all possible light paths that can reach the point. This is the basis for techniques like ray tracing and radiosity.</p>
@@ -289,38 +297,36 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="cell" data-execution_count="4">
 <details>
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sympy <span class="im">import</span> <span class="op">*</span></span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> math</span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> approximate_integral(a, b, n, f):</span>
-<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>    delta_x <span class="op">=</span> (b <span class="op">-</span> a) <span class="op">/</span> n</span>
-<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>    total_sum <span class="op">=</span> <span class="dv">0</span></span>
-<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">1</span>, n <span class="op">+</span> <span class="dv">1</span>):</span>
-<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>        midpoint <span class="op">=</span> <span class="fl">0.5</span> <span class="op">*</span> (<span class="dv">2</span> <span class="op">*</span> a <span class="op">+</span> delta_x <span class="op">*</span> (<span class="dv">2</span> <span class="op">*</span> i <span class="op">-</span> <span class="dv">1</span>))</span>
-<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>        total_sum <span class="op">+=</span> f(midpoint)</span>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> math</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> approximate_integral(a, b, n, f):</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>    delta_x <span class="op">=</span> (b <span class="op">-</span> a) <span class="op">/</span> n</span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>    total_sum <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">1</span>, n <span class="op">+</span> <span class="dv">1</span>):</span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>        midpoint <span class="op">=</span> <span class="fl">0.5</span> <span class="op">*</span> (<span class="dv">2</span> <span class="op">*</span> a <span class="op">+</span> delta_x <span class="op">*</span> (<span class="dv">2</span> <span class="op">*</span> i <span class="op">-</span> <span class="dv">1</span>))</span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>        total_sum <span class="op">+=</span> f(midpoint)</span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> total_sum <span class="op">*</span> delta_x</span>
 <span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> total_sum <span class="op">*</span> delta_x</span>
-<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> my_function(x, mu<span class="op">=</span><span class="dv">0</span>, sigma<span class="op">=</span><span class="dv">1</span>):</span>
-<span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a>    l <span class="op">=</span> <span class="dv">1</span><span class="op">/</span>(sigma<span class="op">*</span>(<span class="dv">2</span><span class="op">*</span>math.pi)<span class="op">**</span><span class="fl">0.5</span>)</span>
-<span id="cb6-17"><a href="#cb6-17" aria-hidden="true" tabindex="-1"></a>    r <span class="op">=</span> <span class="op">-</span><span class="fl">0.5</span><span class="op">*</span>((x <span class="op">-</span> mu) <span class="op">/</span> sigma)<span class="op">**</span><span class="dv">2</span></span>
-<span id="cb6-18"><a href="#cb6-18" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> l<span class="op">*</span>exp(r)</span>
-<span id="cb6-19"><a href="#cb6-19" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-20"><a href="#cb6-20" aria-hidden="true" tabindex="-1"></a>a<span class="op">=-</span><span class="dv">1</span></span>
-<span id="cb6-21"><a href="#cb6-21" aria-hidden="true" tabindex="-1"></a>b<span class="op">=</span><span class="dv">1</span></span>
-<span id="cb6-22"><a href="#cb6-22" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> symbols(<span class="st">'x'</span>)</span>
-<span id="cb6-23"><a href="#cb6-23" aria-hidden="true" tabindex="-1"></a>f <span class="op">=</span> my_function(x)</span>
-<span id="cb6-24"><a href="#cb6-24" aria-hidden="true" tabindex="-1"></a>x_area <span class="op">=</span> np.linspace(a, b, <span class="dv">1000</span>)</span>
-<span id="cb6-25"><a href="#cb6-25" aria-hidden="true" tabindex="-1"></a>f_area <span class="op">=</span> lambdify(x, f)(x_area)</span>
-<span id="cb6-26"><a href="#cb6-26" aria-hidden="true" tabindex="-1"></a>plot(f, xlim<span class="op">=</span>(<span class="op">-</span><span class="dv">5</span>, <span class="dv">5</span>), fill<span class="op">=</span>{<span class="st">'x'</span>: x_area,<span class="st">'y1'</span>:f_area,<span class="st">'color'</span>:<span class="st">'tomato'</span>})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> my_function(x, mu<span class="op">=</span><span class="dv">0</span>, sigma<span class="op">=</span><span class="dv">1</span>):</span>
+<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a>    l <span class="op">=</span> <span class="dv">1</span><span class="op">/</span>(sigma<span class="op">*</span>(<span class="dv">2</span><span class="op">*</span>math.pi)<span class="op">**</span><span class="fl">0.5</span>)</span>
+<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a>    r <span class="op">=</span> <span class="op">-</span><span class="fl">0.5</span><span class="op">*</span>((x <span class="op">-</span> mu) <span class="op">/</span> sigma)<span class="op">**</span><span class="dv">2</span></span>
+<span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> l<span class="op">*</span>exp(r)</span>
+<span id="cb6-17"><a href="#cb6-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-18"><a href="#cb6-18" aria-hidden="true" tabindex="-1"></a>a<span class="op">=-</span><span class="dv">1</span></span>
+<span id="cb6-19"><a href="#cb6-19" aria-hidden="true" tabindex="-1"></a>b<span class="op">=</span><span class="dv">1</span></span>
+<span id="cb6-20"><a href="#cb6-20" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> symbols(<span class="st">'x'</span>)</span>
+<span id="cb6-21"><a href="#cb6-21" aria-hidden="true" tabindex="-1"></a>f <span class="op">=</span> my_function(x)</span>
+<span id="cb6-22"><a href="#cb6-22" aria-hidden="true" tabindex="-1"></a>x_area <span class="op">=</span> np.linspace(a, b, <span class="dv">1000</span>)</span>
+<span id="cb6-23"><a href="#cb6-23" aria-hidden="true" tabindex="-1"></a>f_area <span class="op">=</span> lambdify(x, f)(x_area)</span>
+<span id="cb6-24"><a href="#cb6-24" aria-hidden="true" tabindex="-1"></a>plot(f, xlim<span class="op">=</span>(<span class="op">-</span><span class="dv">5</span>, <span class="dv">5</span>), fill<span class="op">=</span>{<span class="st">'x'</span>: x_area,<span class="st">'y1'</span>:f_area,<span class="st">'color'</span>:<span class="st">'tomato'</span>})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-display">
 <p><img src="integrals_files/figure-html/cell-5-output-1.png" width="662" height="468"></p>
 </div>
 <div class="cell-output cell-output-display" data-execution_count="4">
-<pre><code>&lt;sympy.plotting.plot.Plot at 0x146004490&gt;</code></pre>
+<pre><code>&lt;sympy.plotting.plot.Plot at 0x143a605b0&gt;</code></pre>
 </div>
 </div>
 <div class="cell" data-execution_count="5">

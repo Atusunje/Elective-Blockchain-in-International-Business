@@ -67,16 +67,21 @@ print(f'Total production over 30 days: {total_production} units')
 For example, to calculate the center of mass of an irregularly shaped object, engineers would use calculus and specifically the concept of integration.
 
 ```{python}
-import numpy as np
-from scipy.integrate import quad
+from sympy import *
 
 # Assume an object's mass distribution along the x-axis is given by the function:
 def mass_distribution(x):
-    return x**2 + 3*x + 1  # Arbitrary function for illustrative purposes.
+    return x**2 + 6*x + 9  # Arbitrary function for illustrative purposes.
 
 # We want to find the center of mass of this object over the interval from 0 to 2 meters.
 x_values = np.linspace(0, 2, 100)
 mass_values = mass_distribution(x_values)
+
+x = symbols('x')
+f = mass_distribution(x)
+x_area = np.linspace(0, 2, 100)
+f_area = lambdify(x, f)(x_area)
+plot(f, xlim=(-5, 5), ylim=(0, 80), fill={'x': x_area,'y1':f_area,'color':'tomato'})
 
 # Calculate total mass:
 total_mass, _ = quad(mass_distribution, 0, 2)
@@ -103,9 +108,7 @@ These are just some examples. The applications of integrals are vast and extend 
 ${f(x)={\frac {1}{\sigma {\sqrt {2\pi }}}}e^{-{\frac {1}{2}}\left({\frac {x-\mu }{\sigma }}\right)^{2}}}$
 
 ```{python}
-from sympy import *
 import math
-import numpy as np
 
 def approximate_integral(a, b, n, f):
     delta_x = (b - a) / n
