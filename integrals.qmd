@@ -141,7 +141,7 @@ def integral_function(x):
     sigma = 1
     return(my_function(x, mu, sigma))
   
-area = approximate_integral(a=-1, b=1, n=1000, f=integral_function)
+area = approximate_integral(a=a, b=b, n=1000, f=integral_function)
 
 print(area) # prints 
 ```
