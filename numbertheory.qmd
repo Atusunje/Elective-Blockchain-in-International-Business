@@ -119,7 +119,7 @@ print(f'{toc - tic} secs')
 
 ## Assignment {.unnumbered}
 
-**basic:** Make a short video explaining how factorization and prime numbers are used for encryption. Do proper research and use code demos.
+**Basic:** Make a short video explaining how factorization and prime numbers are used for encryption. Do proper research and use code demos.
 
 **Stretch:** Expand your video with an exploration of the current state of quantum computing and it's expected evolution. Discuss and illustrate the implications for current encryption methodologies. Provide a list of interesting resources on the matter.
 
