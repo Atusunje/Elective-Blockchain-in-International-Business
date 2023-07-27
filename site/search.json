@@ -81,7 +81,7 @@
     "href": "index.html",
     "title": "Introduction",
     "section": "",
-    "text": "Before starting this module make sure you have:\n\naccess to the book Nield, T. (2022). Essential Math for Data Science. O’Reilly Media, Inc.\na data science environment setup\n\nIn case you have not yet set up your environment you can use online notebook services like Google Colab or JupyterLab or Replit"
+    "text": "Prerequisites\n\n\n\n\n\n\nBefore starting this module make sure you have:\n\naccess to the book Nield, T. (2022). Essential Math for Data Science. O’Reilly Media, Inc.\na data science environment setup\n\nIn case you have not yet set up your environment you can use online notebook services like Google Colab or JupyterLab or Replit\n\n\nPurpose\nThe general learning outcome of this course is:\n\nThe student is able to perform a well-defined task independently in a relatively clearly arranged situation, or is able to perform in a complex and unpredictable situation under supervision.\n\nAfter studying this course, you should be able to:\n\nRelate set theory to the concept of probability\n\n\n\nInterpret, modify and sketch mathematical operations\nCompute and solve mathematical equations\nCompute, manipulate, solve and plot mathematical functions\nUse Python or other data science script languages\n\nContent\nIn weeks 1 and 2 you’ll be learning the following topics (sections marked with 🤔 contain assignments):\n\nNumber Theory🤔\nOrder of Operations🤔\nVariables\nFunctions\nSummations\nExponents and Logarithms🤔\nEuler’s Number and Natural Logarithms\nLimits\nDerivatives🤔\nIntegrals🤔"
   },
   {
     "objectID": "index.html#prerequisites",

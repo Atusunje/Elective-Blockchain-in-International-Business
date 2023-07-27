@@ -3,7 +3,7 @@ title: "Introduction"
 jupyter: envpy39
 ---
 
-## Prerequisites
+**Prerequisites**
 
 ::: columns
 ::: {.column width="30%"}
@@ -24,7 +24,7 @@ In case you have not yet set up your environment you can use online notebook ser
 :::
 :::
 
-## Purpose
+**Purpose**
 
 The general learning outcome of this course is:
 
@@ -44,7 +44,7 @@ After studying this course, you should be able to:
 
 -   Use Python or other data science script languages
 
-## Content
+**Content**
 
 In weeks 1 and 2 you'll be learning the following topics (sections marked with 🤔 contain assignments):
 
