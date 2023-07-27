@@ -28,6 +28,7 @@ website:
       - functions.qmd
       - summations.qmd
       - exponentslogs.qmd
+      - derivatives.qmd
       - integrals.qmd
 editor: visual
 jupyter: envpy39
