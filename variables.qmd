@@ -5,8 +5,13 @@ jupyter: envpy39
 
 See book [section](https://learning.oreilly.com/library/view/essential-math-for/9781098102920/ch01.html#idm45252832469312){target="_blank"}
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/cQT33yu9pY8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+```{=html}
+<div class="ratio ratio-16x9 m-5 w-75">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/cQT33yu9pY8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
 
+</iframe>
+</div>
+```
 **Relationship Between Mathematical Variables and Variables in Python**
 
 In mathematics, variables are symbols that represent unknown quantities or values. They allow us to write equations and express relationships between different elements. Similarly, in programming, variables play a crucial role in storing and manipulating data. Python, as a programming language, allows us to work with variables in ways that have similarities to mathematical variables but also exhibit some distinct characteristics.
@@ -16,6 +21,7 @@ In mathematics, variables are symbols that represent unknown quantities or value
 In both mathematics and Python, variables need to be assigned values before they can be used. In Python, the assignment is done using the "=" operator.
 
 **Example: Python Variable**
+
 ```{python}
 x = 5
 ```
@@ -25,6 +31,7 @@ x = 5
 In mathematics, variables remain constant unless explicitly stated otherwise. In contrast, Python allows variables to be updated with new values during the course of a program.
 
 **Example: Updating Python Variable**
+
 ```{python}
 x = 5
 x = x + 3  # The value of x is updated to 8
@@ -35,6 +42,7 @@ x = x + 3  # The value of x is updated to 8
 In both mathematics and Python, variables can represent different types of data. In mathematics, variables are usually used to represent real or complex numbers. In Python, variables can hold a variety of data types, including integers, floating-point numbers, strings, lists, dictionaries, etc.
 
 **Example: Different Data Types in Python**
+
 ```{python}
 x = 5  # Integer
 y = 3.14  # Floating-point number
@@ -45,9 +53,10 @@ student_info = {"name": "Alice", "age": 25}  # Dictionary
 
 **4. Mathematical Operations vs. Python Operations:**
 
-Both mathematical and Python variables can be used in mathematical operations, but there are some differences in notation. For instance, in mathematics, multiplication is often denoted with the "x" symbol, while in Python it is denoted by "*". However, the operators for addition, subtraction, and division are the same in both contexts.
+Both mathematical and Python variables can be used in mathematical operations, but there are some differences in notation. For instance, in mathematics, multiplication is often denoted with the "x" symbol, while in Python it is denoted by "\*". However, the operators for addition, subtraction, and division are the same in both contexts.
 
 **Example: Python Operations**
+
 ```{python}
 x = 5
 y = 3
@@ -60,6 +69,7 @@ result = 2 * x + y  # The result will be 13
 In both mathematics and Python, variable names are used to refer to specific values. However, there are some restrictions on variable names in Python. They cannot start with a number, and they cannot contain spaces or special characters except for underscores.
 
 **Example: Valid and Invalid Variable Names in Python**
+
 ```{python}
 #| eval: false
 

@@ -5,10 +5,13 @@ jupyter: envpy39
 
 See book [section](https://learning.oreilly.com/library/view/essential-math-for/9781098102920/ch01.html#idm45252818933376){target="_blank"}
 
+```{=html}
+<div class="ratio ratio-16x9 m-5 w-75">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/-QHff5pRdM8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
 
 </iframe>
-
+</div>
+```
 Number theory is a branch of mathematics that deals with the properties and relationships of numbers, especially integers. Python, like many programming languages, has several built-in types to handle numbers, each with its own capabilities. The three most common numerical types in Python are `int` for integers, `float` for floating-point numbers, and `complex` for complex numbers.
 
 Let's start with a basic understanding of these number types:
@@ -36,9 +39,14 @@ a = complex(2, 3)  # 2 is the real part, 3 is the imaginary part.
 b = 3 + 4j  # Another way to create a complex number.
 ```
 
+
+```{=html}
+<div class="ratio ratio-16x9 m-5 w-75">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/muBmJWOdoOA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
 
 </iframe>
+</div>
+```
 
 Now, let's illustrate some basic number theory concepts using these Python number types.
 

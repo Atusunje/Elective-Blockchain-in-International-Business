@@ -5,10 +5,13 @@ jupyter: envpy39
 
 See book [section](https://learning.oreilly.com/library/view/essential-math-for/9781098102920/ch01.html#idm45252826042848){target="_blank"}
 
+```{=html}
+<div class="ratio ratio-16x9 m-5 w-75">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/5jwXThH6fg4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
 
 </iframe>
-
+</div>
+```
 **Mathematical Concept of Summations:**
 
 In mathematics, summation is a concept that represents the addition of a sequence of numbers or terms. It is denoted by the symbol "Σ" (sigma) and is used to express the total sum of a series of terms. The general form of a summation is:

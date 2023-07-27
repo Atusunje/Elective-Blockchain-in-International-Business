@@ -5,7 +5,14 @@ jupyter: envpy39
 
 See book [section](https://learning.oreilly.com/library/view/essential-math-for/9781098102920/ch01.html#idm45252829259280){target="_blank"}
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/kvGsIo1TmsM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+```{=html}
+<div class="ratio ratio-16x9 m-5 w-75">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/kvGsIo1TmsM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
+
+</iframe>
+
+</div>
+```
 
 **Relationship Between Mathematical Functions and Functions in Python**
 
@@ -46,6 +53,7 @@ plot(f, ylim=(-50, 175))
 ```
 
 **Example 2: Plotting Multiple Mathematical Functions**
+
 ```{python}
 fd = 20*x - 40
 
@@ -53,6 +61,7 @@ plot(f, fd, ylim=(-50, 175))
 ```
 
 **Example 3: Plotting Multiple Mathematical Functions**
+
 ```{python}
 g = sin(x)
 h = sin(x - pi)

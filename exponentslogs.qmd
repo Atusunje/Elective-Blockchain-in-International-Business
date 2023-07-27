@@ -11,9 +11,13 @@ Understanding exponents and logarithms is crucial for many scientific and financ
 
 **Exponents:** Exponents are mathematical operations that indicate the repeated multiplication of a base number by itself. The exponent, represented by a superscript, tells us how many times the base is multiplied by itself. Exponents are also known as powers. They play a fundamental role in mathematics and have many applications in various fields, including science, engineering, and finance.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/lZfXc4nHooo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
+```{=html}
+<div class="ratio ratio-16x9 m-5 w-75">
+<iframe src="https://www.youtube.com/embed/lZfXc4nHooo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
 
 </iframe>
+</div>
+```
 
 **Notation:** The general notation for expressing an exponent is:
 
@@ -193,6 +197,7 @@ print(a, b)
 ```
 
 ------------------------------------------------------------------------
+
 ## Assignment {.unnumbered}
 
 **Basic:** Make a short video explaining how geometric series are used in financial valuation (discounted cash flow method). Do proper research and use code demos.

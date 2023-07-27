@@ -5,7 +5,13 @@ jupyter: envpy39
 
 See book [section](https://learning.oreilly.com/library/view/essential-math-for/9781098102920/ch01.html#idm45252825129584){target="_blank"}
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/rfG8ce4nNh0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+```{=html}
+<div class="ratio ratio-16x9 m-5 w-75">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/rfG8ce4nNh0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
+
+</iframe>
+</div>
+```
 
 Integrals in calculus can be a challenging concept to grasp, but they can also be a powerful tool for solving various problems in business management and engineering. Integrals can be used to calculate quantities such as total cost, total revenue, and consumer surplus, among others. They are also essential in modeling and analyzing time-dependent phenomena in financial markets, operations management, logistics, and so on.
 
@@ -145,7 +151,6 @@ area = approximate_integral(a=a, b=b, n=1000, f=integral_function)
 
 print(area) # prints 
 ```
-
 
 **Basic:** Make a short video discussing the relationship between integrals and statistics.
 

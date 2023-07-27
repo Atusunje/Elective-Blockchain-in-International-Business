@@ -5,9 +5,13 @@ jupyter: envpy39
 
 See book [section](https://learning.oreilly.com/library/view/essential-math-for/9781098102920/ch01.html#idm45252826120304){target="_blank"}
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/9vKqVkMQHKk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+```{=html}
+<div class="ratio ratio-16x9 m-5 w-75">
+<iframe src="https://www.youtube.com/embed/9vKqVkMQHKk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 </iframe>
+</div>
+```
 
 # Derivatives Explainer
 
