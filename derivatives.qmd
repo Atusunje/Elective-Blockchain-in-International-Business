@@ -103,7 +103,7 @@ For example, consider a simple linear regression model with one variable. The co
 
 **Basic:** Make a short video explaining illustrating the functioning of the chain rule. Start by demonstrating that $(a + b)^2 = a^2 + 2ab + b^2$. For example $(x + 3)^2 = x^2 + 6x + 9$. Use code examples and plots. HINT: revisit the section on [functions](functions.html){target="_blank"}
 
-**Stretch:** Make another video discussing the Gradient Descent algorithm. Implement the Gradient Descent algorithm for a simple linear regression model with one variable. The dataset for the assignment is as follows:
+**Stretch:** Make another video discussing the Gradient Descent algorithm. Implement the algorithm for a simple linear regression model with one variable. The dataset for the assignment is as follows:
 
 ```{python}
 import numpy as np
@@ -120,6 +120,7 @@ Your task is to predict $y$ from $x$ by minimizing the MSE cost function using G
 Remember to start with an initial guess for your parameters (e.g., $m = 0, \ b = 0$) and update them iteratively using the Gradient Descent update rules:
 
 $m = m - α * ∂J/∂m$
+
 $b = b - α * ∂J/∂b$
 
 Where $α$ is the learning rate.

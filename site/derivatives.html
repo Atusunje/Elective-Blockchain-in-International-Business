@@ -311,7 +311,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="assignment" class="level2 unnumbered">
 <h2 class="unnumbered anchored" data-anchor-id="assignment">Assignment</h2>
 <p><strong>Basic:</strong> Make a short video explaining illustrating the functioning of the chain rule. Start by demonstrating that <span class="math inline">\((a + b)^2 = a^2 + 2ab + b^2\)</span>. For example <span class="math inline">\((x + 3)^2 = x^2 + 6x + 9\)</span>. Use code examples and plots. HINT: revisit the section on <a href="functions.html" target="_blank">functions</a></p>
-<p><strong>Stretch:</strong> Make another video discussing the Gradient Descent algorithm. Implement the Gradient Descent algorithm for a simple linear regression model with one variable. The dataset for the assignment is as follows:</p>
+<p><strong>Stretch:</strong> Make another video discussing the Gradient Descent algorithm. Implement the algorithm for a simple linear regression model with one variable. The dataset for the assignment is as follows:</p>
 <div class="cell" data-execution_count="5">
 <details>
 <summary>Code</summary>
@@ -325,7 +325,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <p>Your task is to predict <span class="math inline">\(y\)</span> from <span class="math inline">\(x\)</span> by minimizing the MSE cost function using Gradient Descent. Find the optimal values of <span class="math inline">\(m\)</span> and <span class="math inline">\(b\)</span> and plot the regression line on a scatter plot of <span class="math inline">\(y\)</span> versus <span class="math inline">\(x\)</span>.</p>
 <p>Remember to start with an initial guess for your parameters (e.g., <span class="math inline">\(m = 0, \ b = 0\)</span>) and update them iteratively using the Gradient Descent update rules:</p>
-<p><span class="math inline">\(m = m - α * ∂J/∂m\)</span> <span class="math inline">\(b = b - α * ∂J/∂b\)</span></p>
+<p><span class="math inline">\(m = m - α * ∂J/∂m\)</span></p>
+<p><span class="math inline">\(b = b - α * ∂J/∂b\)</span></p>
 <p>Where <span class="math inline">\(α\)</span> is the learning rate.</p>
 <p><strong>Challenge:</strong> Share your content online (e.g.&nbsp;Linkedin or Medium), gather feedback and write a reflection on it.</p>
 
