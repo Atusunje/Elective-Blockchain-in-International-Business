@@ -18,7 +18,6 @@ Understanding exponents and logarithms is crucial for many scientific and financ
 </iframe>
 </div>
 ```
-
 **Notation:** The general notation for expressing an exponent is:
 
 $a^b$
@@ -54,9 +53,12 @@ print(result)  # Output: 0.1111111111111111
 
 **Logarithms:** Logarithms are the inverse operations of exponents. They represent the power to which a given base must be raised to obtain a specific number. In simpler terms, logarithms answer the question: "What exponent should I raise the base to in order to get the desired number?"
 
+```{=html}
+<div class="ratio ratio-16x9 m-5 w-75">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/Z5myJ8dg_rM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
 
 </iframe>
+</div>
 
 **Notation:** The general notation for expressing a logarithm is:
 
