@@ -12,10 +12,9 @@ See book [section](https://learning.oreilly.com/library/view/essential-math-for/
 </iframe>
 </div>
 ```
-
 In mathematics, the derivative is a fundamental concept in calculus, describing the rate of change of a function at a particular point. Essentially, it gives you the "slope" of the function at that point. The concepts of partial derivatives and chain rule further extend this foundational concept.
 
-## Basic Understanding
+**Basic Understanding**
 
 The derivative of a function f(x) is given by the limit:
 
@@ -39,7 +38,7 @@ print(derivative(f, 2))  # Output: 4.00001
 
 The derivative of $x^2$ is $2x$, so at $x=2$, the derivative is $4$. The output $4.00001$ is slightly higher due to the approximation.
 
-## Partial Derivatives
+**Partial Derivatives**
 
 A partial derivative is like a normal derivative but it's used for functions with more than one variable. We consider one variable at a time and treat all other variables as constants.
 
@@ -59,7 +58,7 @@ def f(x, y):
 print(partial_derivative(f, 2, 3))  # Output: (4.00001, 6.00001)
 ```
 
-## Chain Rule
+**Chain Rule**
 
 The chain rule is a principle in calculus used to compute the derivative of a composition of functions. If you have a function composed of several other functions, the derivative of the overall function is the product of the derivatives of the component functions.
 
@@ -83,17 +82,17 @@ We found $df/dx = 2*(3x+1)*3$ by applying the chain rule: derivative of $v(u) = 
 
 So, the derivative of the function at $x=2$ is $42$.
 
-## Real World Applications
+**Real World Applications**
 
-### Business Management
+**1. Business Management**
 
 In business management, derivatives can be used to optimize profit. Assume we have a function representing the profit of a company as a function of the number of units produced, $P(x)$. The derivative $P'(x)$ gives the rate of change of profit with respect to the units produced. If $P'(x) > 0$, producing more units will increase profit, if $P'(x) < 0$, producing more will decrease profit, and if $P'(x) = 0$, we've reached a maximum or minimum point.
 
-### Engineering
+**2. Engineering**
 
 In engineering, derivatives are used in areas like dynamics, control systems, and signal processing. For instance, in mechanical engineering, the velocity of an object is the derivative of the object's position with respect to time.
 
-### Data Science
+**3. Data Science**
 
 In data science, derivatives play a critical role in optimization algorithms, such as Gradient Descent used in Machine Learning. The derivative is used to determine the direction to move in the parameter space to minimize a given cost function.
 
@@ -101,7 +100,7 @@ For example, consider a simple linear regression model with one variable. The co
 
 ------------------------------------------------------------------------
 
-## Assignment {.unnumbered}
+**Assignment**
 
 **Basic:** Make a short video explaining illustrating the functioning of the chain rule. Start by demonstrating that $(a + b)^2 = a^2 + 2ab + b^2$. For example $(x + 3)^2 = x^2 + 6x + 9$. Use code examples and plots. HINT: revisit the section on [functions](functions.html){target="_blank"}
 

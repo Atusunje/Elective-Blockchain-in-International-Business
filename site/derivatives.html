@@ -163,26 +163,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#basic-understanding" id="toc-basic-understanding" class="nav-link active" data-scroll-target="#basic-understanding"><span class="header-section-number">1</span> Basic Understanding</a></li>
-  <li><a href="#partial-derivatives" id="toc-partial-derivatives" class="nav-link" data-scroll-target="#partial-derivatives"><span class="header-section-number">2</span> Partial Derivatives</a></li>
-  <li><a href="#chain-rule" id="toc-chain-rule" class="nav-link" data-scroll-target="#chain-rule"><span class="header-section-number">3</span> Chain Rule</a></li>
-  <li><a href="#real-world-applications" id="toc-real-world-applications" class="nav-link" data-scroll-target="#real-world-applications"><span class="header-section-number">4</span> Real World Applications</a>
-  <ul class="collapse">
-  <li><a href="#business-management" id="toc-business-management" class="nav-link" data-scroll-target="#business-management"><span class="header-section-number">4.1</span> Business Management</a></li>
-  <li><a href="#engineering" id="toc-engineering" class="nav-link" data-scroll-target="#engineering"><span class="header-section-number">4.2</span> Engineering</a></li>
-  <li><a href="#data-science" id="toc-data-science" class="nav-link" data-scroll-target="#data-science"><span class="header-section-number">4.3</span> Data Science</a></li>
-  </ul></li>
-  <li><a href="#assignment" id="toc-assignment" class="nav-link" data-scroll-target="#assignment">Assignment</a></li>
-  </ul>
-</nav>
-    </div>
+    
 <!-- main -->
-<main class="content column-page-left" id="quarto-document-content">
+<main class="content column-page" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
@@ -214,8 +197,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 </div>
 <p>In mathematics, the derivative is a fundamental concept in calculus, describing the rate of change of a function at a particular point. Essentially, it gives you the “slope” of the function at that point. The concepts of partial derivatives and chain rule further extend this foundational concept.</p>
-<section id="basic-understanding" class="level2" data-number="1">
-<h2 data-number="1" class="anchored" data-anchor-id="basic-understanding"><span class="header-section-number">1</span> Basic Understanding</h2>
+<p><strong>Basic Understanding</strong></p>
 <p>The derivative of a function f(x) is given by the limit:</p>
 <p><span class="math inline">\(f'(x) = \mathop {\lim }\limits_{h \to 0} \frac{f(x + h) - f(x)}{h}\)</span></p>
 <p>In Python, we can approximate this as follows:</p>
@@ -240,9 +222,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <p>The derivative of <span class="math inline">\(x^2\)</span> is <span class="math inline">\(2x\)</span>, so at <span class="math inline">\(x=2\)</span>, the derivative is <span class="math inline">\(4\)</span>. The output <span class="math inline">\(4.00001\)</span> is slightly higher due to the approximation.</p>
-</section>
-<section id="partial-derivatives" class="level2" data-number="2">
-<h2 data-number="2" class="anchored" data-anchor-id="partial-derivatives"><span class="header-section-number">2</span> Partial Derivatives</h2>
+<p><strong>Partial Derivatives</strong></p>
 <p>A partial derivative is like a normal derivative but it’s used for functions with more than one variable. We consider one variable at a time and treat all other variables as constants.</p>
 <p>For example, consider the function <span class="math inline">\(f(x, y) = x^2 + y^2\)</span>. The partial derivative of <span class="math inline">\(f\)</span> with respect to <span class="math inline">\(x\)</span> (denoted as <span class="math inline">\(\frac{\partial f}{\partial x}\)</span>) is <span class="math inline">\(2x\)</span>, and the partial derivative with respect to <span class="math inline">\(y\)</span> (denoted as <span class="math inline">\(\frac{\partial f}{\partial y}\)</span>) is <span class="math inline">\(2y\)</span>.</p>
 <p>In Python, you can approximate these as follows:</p>
@@ -263,9 +243,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <pre><code>(4.000010000027032, 6.000009999951316)</code></pre>
 </div>
 </div>
-</section>
-<section id="chain-rule" class="level2" data-number="3">
-<h2 data-number="3" class="anchored" data-anchor-id="chain-rule"><span class="header-section-number">3</span> Chain Rule</h2>
+<p><strong>Chain Rule</strong></p>
 <p>The chain rule is a principle in calculus used to compute the derivative of a composition of functions. If you have a function composed of several other functions, the derivative of the overall function is the product of the derivatives of the component functions.</p>
 <p>For example, if <span class="math inline">\(y = f(g(h(x)))\)</span>, then <span class="math inline">\(dy/dx = f'(g(h(x))) * g'(h(x)) * h'(x)\)</span>.</p>
 <p>Consider the function <span class="math inline">\(f(x) = (3x + 1)^2\)</span>. Here, <span class="math inline">\(f(x)\)</span> is a composition of <span class="math inline">\(u(x) = 3x + 1\)</span> and <span class="math inline">\(v(u) = u^2\)</span>.</p>
@@ -287,26 +265,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <p>We found <span class="math inline">\(df/dx = 2*(3x+1)*3\)</span> by applying the chain rule: derivative of <span class="math inline">\(v(u) = u^2\)</span> is <span class="math inline">\(2*u\)</span>, and derivative of <span class="math inline">\(u(x) = 3x + 1\)</span> is <span class="math inline">\(3\)</span>. Thus, the derivative of <span class="math inline">\(f(x) = (3x + 1)^2\)</span> is <span class="math inline">\(2*(3x+1)*3\)</span>.</p>
 <p>So, the derivative of the function at <span class="math inline">\(x=2\)</span> is <span class="math inline">\(42\)</span>.</p>
-</section>
-<section id="real-world-applications" class="level2" data-number="4">
-<h2 data-number="4" class="anchored" data-anchor-id="real-world-applications"><span class="header-section-number">4</span> Real World Applications</h2>
-<section id="business-management" class="level3" data-number="4.1">
-<h3 data-number="4.1" class="anchored" data-anchor-id="business-management"><span class="header-section-number">4.1</span> Business Management</h3>
+<p><strong>Real World Applications</strong></p>
+<p><strong>1. Business Management</strong></p>
 <p>In business management, derivatives can be used to optimize profit. Assume we have a function representing the profit of a company as a function of the number of units produced, <span class="math inline">\(P(x)\)</span>. The derivative <span class="math inline">\(P'(x)\)</span> gives the rate of change of profit with respect to the units produced. If <span class="math inline">\(P'(x) &gt; 0\)</span>, producing more units will increase profit, if <span class="math inline">\(P'(x) &lt; 0\)</span>, producing more will decrease profit, and if <span class="math inline">\(P'(x) = 0\)</span>, we’ve reached a maximum or minimum point.</p>
-</section>
-<section id="engineering" class="level3" data-number="4.2">
-<h3 data-number="4.2" class="anchored" data-anchor-id="engineering"><span class="header-section-number">4.2</span> Engineering</h3>
+<p><strong>2. Engineering</strong></p>
 <p>In engineering, derivatives are used in areas like dynamics, control systems, and signal processing. For instance, in mechanical engineering, the velocity of an object is the derivative of the object’s position with respect to time.</p>
-</section>
-<section id="data-science" class="level3" data-number="4.3">
-<h3 data-number="4.3" class="anchored" data-anchor-id="data-science"><span class="header-section-number">4.3</span> Data Science</h3>
+<p><strong>3. Data Science</strong></p>
 <p>In data science, derivatives play a critical role in optimization algorithms, such as Gradient Descent used in Machine Learning. The derivative is used to determine the direction to move in the parameter space to minimize a given cost function.</p>
 <p>For example, consider a simple linear regression model with one variable. The cost function <span class="math inline">\(J(m, b)\)</span> for a given slope <span class="math inline">\(m\)</span> and intercept <span class="math inline">\(b\)</span> can be defined as the mean squared error (MSE) between the predicted and actual values. We can use gradient descent to find the <span class="math inline">\(m\)</span> and <span class="math inline">\(b\)</span> that minimize <span class="math inline">\(J(m, b)\)</span>, where the derivatives <span class="math inline">\(∂J/∂m\)</span> and <span class="math inline">\(∂J/∂b\)</span> guide the updating process.</p>
 <hr>
-</section>
-</section>
-<section id="assignment" class="level2 unnumbered">
-<h2 class="unnumbered anchored" data-anchor-id="assignment">Assignment</h2>
+<p><strong>Assignment</strong></p>
 <p><strong>Basic:</strong> Make a short video explaining illustrating the functioning of the chain rule. Start by demonstrating that <span class="math inline">\((a + b)^2 = a^2 + 2ab + b^2\)</span>. For example <span class="math inline">\((x + 3)^2 = x^2 + 6x + 9\)</span>. Use code examples and plots. HINT: revisit the section on <a href="functions.html" target="_blank">functions</a></p>
 <p><strong>Stretch:</strong> Make another video discussing the Gradient Descent algorithm. Implement the algorithm for a simple linear regression model with one variable. The dataset for the assignment is as follows:</p>
 <div class="cell" data-execution_count="5">
@@ -328,26 +296,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p><strong>Challenge:</strong> Share your content online (e.g.&nbsp;Linkedin or Medium), gather feedback and write a reflection on it.</p>
 
 
-</section>
 
 </main> <!-- /main -->
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD" crossorigin="anonymous"></script>
-<script>
-
-// Function to increase image size
-function toggleImageSize(imageId) {
-  const image = document.getElementById(imageId); // Get the image element by its id
-
-  if (image.style.width !== '175%') { // If the image is not large
-    image.style.width = '175%'; // Toggle it to large width
-    image.style.cursor = 'zoom-out';
-  } else { // Otherwise
-    image.style.width = '100%'; // Toggle it to 100% width
-    image.style.cursor = 'zoom-in';
-  }
-}
-</script>
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
