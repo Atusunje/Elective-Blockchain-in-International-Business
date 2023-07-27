@@ -13,15 +13,13 @@ See book [section](https://learning.oreilly.com/library/view/essential-math-for/
 </div>
 ```
 
-# Derivatives Explainer
-
 In mathematics, the derivative is a fundamental concept in calculus, describing the rate of change of a function at a particular point. Essentially, it gives you the "slope" of the function at that point. The concepts of partial derivatives and chain rule further extend this foundational concept.
 
-## 1. Basic Understanding
+## Basic Understanding
 
 The derivative of a function f(x) is given by the limit:
 
-$f'(x) = \mathop {\lim }\limits_{h \to 0}  \frac{f(x + h) - f(x)}{h}$
+$f'(x) = \mathop {\lim }\limits_{h \to 0} \frac{f(x + h) - f(x)}{h}$
 
 In Python, we can approximate this as follows:
 
@@ -41,7 +39,7 @@ print(derivative(f, 2))  # Output: 4.00001
 
 The derivative of $x^2$ is $2x$, so at $x=2$, the derivative is $4$. The output $4.00001$ is slightly higher due to the approximation.
 
-## 2. Partial Derivatives
+## Partial Derivatives
 
 A partial derivative is like a normal derivative but it's used for functions with more than one variable. We consider one variable at a time and treat all other variables as constants.
 
@@ -61,13 +59,13 @@ def f(x, y):
 print(partial_derivative(f, 2, 3))  # Output: (4.00001, 6.00001)
 ```
 
-## 3. Chain Rule
+## Chain Rule
 
 The chain rule is a principle in calculus used to compute the derivative of a composition of functions. If you have a function composed of several other functions, the derivative of the overall function is the product of the derivatives of the component functions.
 
 For example, if $y = f(g(h(x)))$, then $dy/dx = f'(g(h(x))) * g'(h(x)) * h'(x)$.
 
-Consider the function $f(x) = (3x + 1)^2$. Here, $f(x)$ is a composition of $u(x) = 3x + 1$ and $v(u) = u^2$. 
+Consider the function $f(x) = (3x + 1)^2$. Here, $f(x)$ is a composition of $u(x) = 3x + 1$ and $v(u) = u^2$.
 
 Using the chain rule to find the derivative:
 
@@ -85,7 +83,7 @@ We found $df/dx = 2*(3x+1)*3$ by applying the chain rule: derivative of $v(u) = 
 
 So, the derivative of the function at $x=2$ is $42$.
 
-## 4. Real World Applications
+## Real World Applications
 
 ### Business Management
 
@@ -117,7 +115,6 @@ np.random.seed(0)
 x = np.random.rand(100, 1)
 y = 2 + 3 * x + np.random.rand(100, 1)
 ```
-
 
 Your task is to predict $y$ from $x$ by minimizing the MSE cost function using Gradient Descent. Find the optimal values of $m$ and $b$ and plot the regression line on a scatter plot of $y$ versus $x$.
 
