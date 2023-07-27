@@ -12,7 +12,6 @@ See book [section](https://learning.oreilly.com/library/view/essential-math-for/
 </iframe>
 </div>
 ```
-
 Integrals in calculus can be a challenging concept to grasp, but they can also be a powerful tool for solving various problems in business management and engineering. Integrals can be used to calculate quantities such as total cost, total revenue, and consumer surplus, among others. They are also essential in modeling and analyzing time-dependent phenomena in financial markets, operations management, logistics, and so on.
 
 **Understanding Integrals**
@@ -140,7 +139,7 @@ x = symbols('x')
 f = my_function(x)
 x_area = np.linspace(a, b, 1000)
 f_area = lambdify(x, f)(x_area)
-plot(f, xlim=(-5, 5), fill={'x': x_area,'y1':f_area,'color':'tomato'})
+plot(f, xlim=(-4, 4), fill={'x': x_area,'y1':f_area,'color':'tomato'})
 
 def integral_function(x):
     mu = 0
