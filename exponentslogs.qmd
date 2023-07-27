@@ -73,7 +73,7 @@ Where $b$ is the base, and $x$ is the number.
 -   $log_5(25) = 2$ $(since \ 5^2 = 25)$
 
 -   $log_{10}(1) = 0$ $(since \ 10^0 = 1)$
-
+```
 **Python Code for Logarithms:** Python's math module provides the `log()` function to calculate logarithms with a specified base.
 
 ```{python}
