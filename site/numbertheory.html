@@ -324,18 +324,19 @@ False</code></pre>
 <span id="cb10-25"><a href="#cb10-25" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f'</span><span class="sc">{</span>toc <span class="op">-</span> tic<span class="sc">}</span><span class="ss"> secs'</span>)</span>
 <span id="cb10-26"><a href="#cb10-26" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb10-27"><a href="#cb10-27" aria-hidden="true" tabindex="-1"></a>tic <span class="op">=</span> time.time()</span>
-<span id="cb10-28"><a href="#cb10-28" aria-hidden="true" tabindex="-1"></a><span class="co"># print(find_factors(997*999983)) </span></span>
+<span id="cb10-28"><a href="#cb10-28" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(find_factors(<span class="dv">997</span><span class="op">*</span><span class="dv">999983</span>)) </span>
 <span id="cb10-29"><a href="#cb10-29" aria-hidden="true" tabindex="-1"></a>toc <span class="op">=</span> time.time()</span>
 <span id="cb10-30"><a href="#cb10-30" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f'</span><span class="sc">{</span>toc <span class="op">-</span> tic<span class="sc">}</span><span class="ss"> secs'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1, 2, 3, 4, 6, 12]
-0.0003218650817871094 secs
+0.0003058910369873047 secs
 [1, 997]
-0.00010395050048828125 secs
+0.00010800361633300781 secs
 [1, 999983]
-0.05654597282409668 secs
-1.9073486328125e-05 secs</code></pre>
+0.0583491325378418 secs
+[1, 997, 999983, 996983051]
+51.64643096923828 secs</code></pre>
 </div>
 </div>
 <hr>

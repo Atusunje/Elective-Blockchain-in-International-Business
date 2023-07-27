@@ -118,7 +118,7 @@ toc = time.time()
 print(f'{toc - tic} secs')
 
 tic = time.time()
-# print(find_factors(997*999983)) 
+print(find_factors(997*999983)) 
 toc = time.time()
 print(f'{toc - tic} secs')
 ```
