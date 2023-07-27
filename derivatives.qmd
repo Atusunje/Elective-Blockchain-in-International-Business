@@ -28,7 +28,7 @@ def derivative(f, x, h=0.00001):
     return (f(x + h) - f(x)) / h
 ```
 
-This function can be used to find the derivative of a function at a given point. For example, if you have a function $f(x) = x^2$, you can find the derivative at x=2 like so:
+This function can be used to find the derivative of a function at a given point. For example, if you have a function $f(x) = x^2$, you can find the derivative at $x=2$ like so:
 
 ```{python}
 def f(x):

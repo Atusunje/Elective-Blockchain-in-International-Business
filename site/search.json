@@ -116,7 +116,7 @@
     "href": "derivatives.html#basic-understanding",
     "title": "Derivatives 🤔",
     "section": "1 Basic Understanding",
-    "text": "1 Basic Understanding\nThe derivative of a function f(x) is given by the limit:\n\\(f'(x) = \\mathop {\\lim }\\limits_{h \\to 0} \\frac{f(x + h) - f(x)}{h}\\)\nIn Python, we can approximate this as follows:\n\n\nCode\ndef derivative(f, x, h=0.00001):\n    return (f(x + h) - f(x)) / h\n\n\nThis function can be used to find the derivative of a function at a given point. For example, if you have a function \\(f(x) = x^2\\), you can find the derivative at x=2 like so:\n\n\nCode\ndef f(x):\n    return x**2\n\nprint(derivative(f, 2))  # Output: 4.00001\n\n\n4.000010000027032\n\n\nThe derivative of \\(x^2\\) is \\(2x\\), so at \\(x=2\\), the derivative is \\(4\\). The output \\(4.00001\\) is slightly higher due to the approximation."
+    "text": "1 Basic Understanding\nThe derivative of a function f(x) is given by the limit:\n\\(f'(x) = \\mathop {\\lim }\\limits_{h \\to 0} \\frac{f(x + h) - f(x)}{h}\\)\nIn Python, we can approximate this as follows:\n\n\nCode\ndef derivative(f, x, h=0.00001):\n    return (f(x + h) - f(x)) / h\n\n\nThis function can be used to find the derivative of a function at a given point. For example, if you have a function \\(f(x) = x^2\\), you can find the derivative at \\(x=2\\) like so:\n\n\nCode\ndef f(x):\n    return x**2\n\nprint(derivative(f, 2))  # Output: 4.00001\n\n\n4.000010000027032\n\n\nThe derivative of \\(x^2\\) is \\(2x\\), so at \\(x=2\\), the derivative is \\(4\\). The output \\(4.00001\\) is slightly higher due to the approximation."
   },
   {
     "objectID": "derivatives.html#partial-derivatives",
