@@ -25,7 +25,11 @@ website:
       - functions.qmd
       - summations.qmd
       - exponentslogs.qmd
+      - limits.qmd
       - derivatives.qmd
       - integrals.qmd
+
+execute:
+  freeze: auto
 editor: visual
 jupyter: envpy39

@@ -1,0 +1,11 @@
+{
+  "hash": "4d862f82494065df2f2ef4fc2a2a64c9",
+  "result": {
+    "markdown": "---\ntitle: Summations\n---\n\nSee book [section](https://learning.oreilly.com/library/view/essential-math-for/9781098102920/ch01.html#idm45252826042848){target=\"_blank\"}\n\n\n```{=html}\n<div class=\"ratio ratio-16x9 m-5 w-75\">\n<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/5jwXThH6fg4\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen>\n\n</iframe>\n</div>\n```\n\n**Mathematical Concept of Summations:**\n\nIn mathematics, summation is a concept that represents the addition of a sequence of numbers or terms. It is denoted by the symbol \"Σ\" (sigma) and is used to express the total sum of a series of terms. The general form of a summation is:\n\n$\\sum_{n=1}^{k} f(n)$\n\nHere, $n$ is the index variable that takes on values from 1 to $k$ and $f(n)$ is the function that defines the terms to be summed. The summation symbol indicates that we need to add up all the terms in the series for each value of $n$.\n\n**Example of Summation:**\n\nLet's consider the following example of a simple summation:\n\n$\\sum_{n=1}^{5} n$\n\nThis summation represents adding up all the integers from 1 to 5:\n\n1 + 2 + 3 + 4 + 5 = 15\n\n**Implementing Summations in Python:**\n\nIn Python, you can use loops to implement summations. The `for` loop is commonly used to iterate through a range of values and accumulate the sum.\n\n**Example of Summation in Python:**\n\n::: {.cell execution_count=1}\n``` {.python .cell-code}\n# Calculate the summation Σ (n = 1 to 5) n\ntotal_sum = 0\nfor n in range(1, 6):\n    total_sum += n\n\nprint(total_sum)  # Output: 15\n```\n\n::: {.cell-output .cell-output-stdout}\n```\n15\n```\n:::\n:::\n\n\n",
+    "supporting": [
+      "summations_files"
+    ],
+    "filters": [],
+    "includes": {}
+  }
+}

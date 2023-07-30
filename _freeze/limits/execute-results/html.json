@@ -1,0 +1,11 @@
+{
+  "hash": "6915c9a3c42538cfdb6164d2462b7c51",
+  "result": {
+    "markdown": "---\ntitle: Summations\n---\n\nSee book [section](https://learning.oreilly.com/library/view/essential-math-for/9781098102920/ch01.html#idm45252826293904){target=\"_blank\"}\n\n\n```{=html}\n<div class=\"ratio ratio-16x9 m-5 w-75\">\n<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/a2Ia_ZlUCaQ\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen></iframe>\n</div>\n```\n\n",
+    "supporting": [
+      "limits_files"
+    ],
+    "filters": [],
+    "includes": {}
+  }
+}

@@ -1,0 +1,12 @@
+---
+title: "Summations"
+jupyter: envpy39
+---
+
+See book [section](https://learning.oreilly.com/library/view/essential-math-for/9781098102920/ch01.html#idm45252826293904){target="_blank"}
+
+```{=html}
+<div class="ratio ratio-16x9 m-5 w-75">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/a2Ia_ZlUCaQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
+```
