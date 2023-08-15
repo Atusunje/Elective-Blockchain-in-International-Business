@@ -88,7 +88,7 @@ In week 4 you'll learn to uncover underlying patterns and trends utilizing infer
 
 ```{=html}
 <div class="ratio ratio-16x9 m-5 w-75">
-<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vTwubCm9sTlLyEiNR1iTkA064fz4telKJoso7Sim4pv1gdmSiJwAuifbLv1Absi4VfOVJX1d5CRnm8A/embed?start=false&loop=false&delayms=3000" frameborder="0" width="1280" height="749" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vTDm7pc0WwNc1ibSI4f-zXQrctjLf1PdGW2FAqRXoSMnkbqxKHkNKCVAZrX7CRXmk84i_poRhuvoE_Y/embed?start=false&loop=false&delayms=3000" frameborder="0" width="1280" height="749" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
 </div>
 ```
 ## Inferential Statistics
@@ -97,7 +97,7 @@ In week 5 you'll learn to discover basic patterns and trends using inferential s
 
 ```{=html}
 <div class="ratio ratio-16x9 m-5 w-75">
-<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vTwubCm9sTlLyEiNR1iTkA064fz4telKJoso7Sim4pv1gdmSiJwAuifbLv1Absi4VfOVJX1d5CRnm8A/embed?start=false&loop=false&delayms=3000" frameborder="0" width="1280" height="749" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vR6uytzrFUMsIWbpZejhzjmp8AeRBLWMEZ3GUQ_txfgWtxIj83Pwy2zX3Qs-Ua7N6bzRqdCCkFdIHJG/embed?start=false&loop=false&delayms=3000" frameborder="0" width="1280" height="749" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
 </div>
 ```
 :::
