@@ -86,7 +86,29 @@ So, the derivative of the function at $x=2$ is $42$.
 
 **1. Business Management**
 
-In business management, derivatives can be used to optimize profit. Assume we have a function representing the profit of a company as a function of the number of units produced, $P(x)$. The derivative $P'(x)$ gives the rate of change of profit with respect to the units produced. If $P'(x) > 0$, producing more units will increase profit, if $P'(x) < 0$, producing more will decrease profit, and if $P'(x) = 0$, we've reached a maximum or minimum point.
+In business management, derivatives can be used to optimize profit. Assume we have a function representing the profit of a company as a function of the price, $f(p)$. The derivative $f'(p)$ gives the rate of change of profit with respect to the price. If $f'(p) > 0$, producing more units will increase profit, if $f'(p) < 0$, producing more will decrease profit, and if $f'(xp) = 0$, we've reached a maximum or minimum point.
+
+Take for instance the function $f(p) = -p^2 + 20p$.
+
+```{python}
+import numpy as np
+import matplotlib.pyplot as plt
+
+def profit(p):
+    return -p**2 + 20*p
+
+prices = np.linspace(0, 20, 400)
+profits = profit(prices)
+
+plt.plot(prices, profits)
+plt.title('Profit vs. Price')
+plt.xlabel('Price')
+plt.ylabel('Profit')
+plt.grid(True)
+plt.show()
+```
+
+To find the price level that maximizes profits, we first obtain the derivative function $f'(p) = -2p + 20$, solve the equation $-2p + 20 = 0$ and find that the optimal price level $p = 10$ results in a profit of $-(10^2) + 20 * 10 =  100$.
 
 **2. Engineering**
 
