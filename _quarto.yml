@@ -27,6 +27,7 @@ website:
       - exponentslogs.qmd
       - limits.qmd
       - derivatives.qmd
+      - euler.qmd
       - integrals.qmd
 
 execute:

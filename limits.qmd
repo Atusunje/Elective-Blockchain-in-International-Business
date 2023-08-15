@@ -10,8 +10,6 @@ See book [section](https://learning.oreilly.com/library/view/essential-math-for/
 <iframe width="560" height="315" src="https://www.youtube.com/embed/a2Ia_ZlUCaQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 </div>
 ```
-**Limits in Calculus for Undergraduate Business Management and Engineering Students**
-
 **Introduction**
 
 In calculus, the concept of a limit is fundamental. It forms the foundation for differentiation and integration, which are essential tools in fields ranging from engineering to economics. For business management and engineering students diving into data science, understanding limits can offer insights into how functions behave.
