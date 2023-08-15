@@ -46,6 +46,11 @@ After studying this course, you should be able to:
 
 **Content**
 
+The course will cover the following topics.
+
+::: panel-tabset
+## Basic Math and Calculus
+
 In weeks 1 and 2 you'll be learning the following topics (sections marked with 🤔 contain assignments):
 
 1.  [**Number Theory**](numbertheory.html)🤔
@@ -67,3 +72,34 @@ In weeks 1 and 2 you'll be learning the following topics (sections marked with �
 9.  [**Euler's Number and Natural Logarithms**](euler.html)
 
 10. [**Integrals**](integrals.html)🤔
+
+## Probablity
+
+In week 3 you'll learn basic probability theory.
+
+```{=html}
+<div class="ratio ratio-16x9 m-5 w-75">
+<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vTwubCm9sTlLyEiNR1iTkA064fz4telKJoso7Sim4pv1gdmSiJwAuifbLv1Absi4VfOVJX1d5CRnm8A/embed?start=false&loop=false&delayms=3000" frameborder="0" width="1280" height="749" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+</div>
+```
+## Descriptive Statistics
+
+In week 4 you'll learn to uncover underlying patterns and trends utilizing inferential statistics.
+
+```{=html}
+<div class="ratio ratio-16x9 m-5 w-75">
+<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vTwubCm9sTlLyEiNR1iTkA064fz4telKJoso7Sim4pv1gdmSiJwAuifbLv1Absi4VfOVJX1d5CRnm8A/embed?start=false&loop=false&delayms=3000" frameborder="0" width="1280" height="749" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+</div>
+```
+## Inferential Statistics
+
+In week 5 you'll learn to discover basic patterns and trends using inferential statistics.
+
+```{=html}
+<div class="ratio ratio-16x9 m-5 w-75">
+<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vTwubCm9sTlLyEiNR1iTkA064fz4telKJoso7Sim4pv1gdmSiJwAuifbLv1Absi4VfOVJX1d5CRnm8A/embed?start=false&loop=false&delayms=3000" frameborder="0" width="1280" height="749" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+</div>
+```
+:::
+
+
