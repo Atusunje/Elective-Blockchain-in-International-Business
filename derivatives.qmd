@@ -16,7 +16,7 @@ In mathematics, the derivative is a fundamental concept in calculus, describing 
 
 **Basic Understanding**
 
-The derivative of a function f(x) is given by the limit:
+The derivative of a function $f(x)$ is given by the limit:
 
 $f'(x) = \mathop {\lim }\limits_{h \to 0} \frac{f(x + h) - f(x)}{h}$
 

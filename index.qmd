@@ -62,7 +62,7 @@ In weeks 1 and 2 you'll be learning the following topics (sections marked with ð
 
 7.  [**Euler's Number and Natural Logarithms**](https://learning.oreilly.com/library/view/essential-math-for/9781098102920/ch01.html#idm45252823468736)
 
-8.  [**Limits**](https://learning.oreilly.com/library/view/essential-math-for/9781098102920/ch01.html#idm45252826293904)
+8.  [**Limits**](limits.html)
 
 9.  [**Derivatives**](derivatives.html)ðŸ¤”
 
