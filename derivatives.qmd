@@ -113,7 +113,7 @@ plt.show()
 To find the price level that maximizes profits, we first obtain the derivative function $f'(p) = -2p + 20$, solve the equation $-2p + 20 = 0$ and check that the optimal price level $p = 10$ results in a profit of $-(10^2) + 20 * 10 =  100$.
 
 ```{python}
-print(derivative(profit, 10, h=0.00000000001))  # Output: almost zero
+print(derivative(profit, 10))  # Output: almost zero
 ```
 
 **2. Engineering**
