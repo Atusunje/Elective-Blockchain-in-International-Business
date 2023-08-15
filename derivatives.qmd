@@ -88,7 +88,7 @@ So, the derivative of the function at $x=2$ is $42$.
 
 **1. Business Management**
 
-In business management, derivatives can be used to optimize profit. Assume we have a function representing the profit of a company as a function of the price, $f(p)$. The derivative $f'(p)$ gives the rate of change of profit with respect to the price. If $f'(p) > 0$, producing more units will increase profit, if $f'(p) < 0$, producing more will decrease profit, and if $f'(xp) = 0$, we've reached a maximum or minimum point.
+In business management, derivatives can be used to optimize profit. Assume we have a function representing the profit of a company as a function of the price, $f(p)$. The derivative $f'(p)$ gives the rate of change of profit with respect to the price. If $f'(p) > 0$, producing more units will increase profit, if $f'(p) < 0$, producing more will decrease profit, and if $f'(p) = 0$, we've reached a maximum or minimum point.
 
 Take for instance the function $f(p) = -p^2 + 20p$.
 
