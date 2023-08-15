@@ -226,6 +226,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <p>The derivative of <span class="math inline">\(x^2\)</span> is <span class="math inline">\(2x\)</span>, so at <span class="math inline">\(x=2\)</span>, the derivative is <span class="math inline">\(4\)</span>. The output <span class="math inline">\(4.00001\)</span> is slightly higher due to the approximation.</p>
+<p><em>Can you check the derivative of <span class="math inline">\(f(x) = e^x\)</span>?</em></p>
 <p><strong>Partial Derivatives</strong></p>
 <p>A partial derivative is like a normal derivative but it’s used for functions with more than one variable. We consider one variable at a time and treat all other variables as constants.</p>
 <p>For example, consider the function <span class="math inline">\(f(x, y) = x^2 + y^2\)</span>. The partial derivative of <span class="math inline">\(f\)</span> with respect to <span class="math inline">\(x\)</span> (denoted as <span class="math inline">\(\frac{\partial f}{\partial x}\)</span>) is <span class="math inline">\(2x\)</span>, and the partial derivative with respect to <span class="math inline">\(y\)</span> (denoted as <span class="math inline">\(\frac{\partial f}{\partial y}\)</span>) is <span class="math inline">\(2y\)</span>.</p>
@@ -296,7 +297,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p><img src="derivatives_files/figure-html/cell-6-output-1.png" width="593" height="449"></p>
 </div>
 </div>
-<p>To find the price level that maximizes profits, we first obtain the derivative function <span class="math inline">\(f'(p) = -2p + 20\)</span>, solve the equation <span class="math inline">\(-2p + 20 = 0\)</span> and find that the optimal price level <span class="math inline">\(p = 10\)</span> results in a profit of <span class="math inline">\(-(10^2) + 20 * 10 = 100\)</span>.</p>
+<p>To find the price level that maximizes profits, we first obtain the derivative function <span class="math inline">\(f'(p) = -2p + 20\)</span>, solve the equation <span class="math inline">\(-2p + 20 = 0\)</span> and check that the optimal price level <span class="math inline">\(p = 10\)</span> results in a profit of <span class="math inline">\(-(10^2) + 20 * 10 = 100\)</span>.</p>
+<div class="cell" data-execution_count="6">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(derivative(profit, <span class="dv">10</span>, h<span class="op">=</span><span class="fl">0.00000000001</span>))  <span class="co"># Output: almost zero</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>0.0</code></pre>
+</div>
+</div>
 <p><strong>2. Engineering</strong></p>
 <p>In engineering, derivatives are used in areas like dynamics, control systems, and signal processing. For instance, in mechanical engineering, the velocity of an object is the derivative of the object’s position with respect to time.</p>
 <p><strong>3. Data Science</strong></p>
@@ -307,15 +317,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h2 class="unnumbered anchored" data-anchor-id="assignment">Assignment</h2>
 <p><strong>Basic:</strong> Make a short video explaining illustrating the functioning of the chain rule. Start by demonstrating that <span class="math inline">\((a + b)^2 = a^2 + 2ab + b^2\)</span>. For example <span class="math inline">\((x + 3)^2 = x^2 + 6x + 9\)</span>. Use code examples and plots. HINT: revisit the section on <a href="functions.html" target="_blank">functions</a></p>
 <p><strong>Stretch:</strong> Make another video discussing the Gradient Descent algorithm. Implement the algorithm for a simple linear regression model with one variable. The dataset for the assignment is as follows:</p>
-<div class="cell" data-execution_count="6">
+<div class="cell" data-execution_count="7">
 <details>
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Generate some sample data</span></span>
-<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>np.random.seed(<span class="dv">0</span>)</span>
-<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> np.random.rand(<span class="dv">100</span>, <span class="dv">1</span>)</span>
-<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> <span class="dv">2</span> <span class="op">+</span> <span class="dv">3</span> <span class="op">*</span> x <span class="op">+</span> np.random.rand(<span class="dv">100</span>, <span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Generate some sample data</span></span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>np.random.seed(<span class="dv">0</span>)</span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> np.random.rand(<span class="dv">100</span>, <span class="dv">1</span>)</span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> <span class="dv">2</span> <span class="op">+</span> <span class="dv">3</span> <span class="op">*</span> x <span class="op">+</span> np.random.rand(<span class="dv">100</span>, <span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 <p>Your task is to predict <span class="math inline">\(y\)</span> from <span class="math inline">\(x\)</span> by minimizing the MSE cost function using Gradient Descent. Find the optimal values of <span class="math inline">\(m\)</span> and <span class="math inline">\(b\)</span> and plot the regression line on a scatter plot of <span class="math inline">\(y\)</span> versus <span class="math inline">\(x\)</span>.</p>
