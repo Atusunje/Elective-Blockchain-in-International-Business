@@ -39,7 +39,6 @@ a = complex(2, 3)  # 2 is the real part, 3 is the imaginary part.
 b = 3 + 4j  # Another way to create a complex number.
 ```
 
-
 ```{=html}
 <div class="ratio ratio-16x9 m-5 w-75">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/muBmJWOdoOA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
@@ -47,7 +46,6 @@ b = 3 + 4j  # Another way to create a complex number.
 </iframe>
 </div>
 ```
-
 Now, let's illustrate some basic number theory concepts using these Python number types.
 
 1.  **Even and Odd Numbers**: An integer is even if it is divisible by 2, and odd if it's not.
@@ -63,7 +61,17 @@ print(is_even(4))  # True
 print(is_odd(7))  # True
 ```
 
-2.  **Prime Numbers**: A prime number is a positive integer greater than 1 that has no positive integer divisors other than 1 and itself.
+
+
+2.  **Irrational Numbers**: An irrational number cannot be expressed as a ratio between two numbers and it does not repeat periodically. One example is the number $\pi$ (pi), which Python can approximate with float. It's important to remember that due to the limitations of representing real numbers in digital computers, certain mathematical properties might not hold exactly in computer arithmetic, especially with floating-point numbers.
+
+```{python}
+import math
+
+print(math.pi)  # 3.141592653589793
+```
+
+3.  **Prime Numbers**: One of the central themes in number theory is the study of prime numbers. A prime number is a positive integer greater than one that has no positive divisors other than one and itself. For example, 2, 3, 5, 7, 11, and 13 are all prime numbers. A positive integer that is not prime is called composite. The fundamental theorem of arithmetic states that every positive integer can be uniquely expressed as a product of primes. This means that there is only one way to write a positive integer as a product of primes, up to the order in which the factors are written.
 
 ```{python}
 def is_prime(n):
@@ -77,16 +85,6 @@ def is_prime(n):
 print(is_prime(7))  # True
 print(is_prime(10))  # False
 ```
-
-3.  **Irrational Numbers**: An irrational number cannot be expressed as a ratio between two numbers and it does not repeat periodically. One example is the number $\pi$ (pi), which Python can approximate with float. It's important to remember that due to the limitations of representing real numbers in digital computers, certain mathematical properties might not hold exactly in computer arithmetic, especially with floating-point numbers.
-
-```{python}
-import math
-
-print(math.pi)  # 3.141592653589793
-```
-
-One of the central themes in number theory is the study of prime numbers. A prime number is a positive integer greater than one that has no positive divisors other than one and itself. For example, 2, 3, 5, 7, 11, and 13 are all prime numbers. A positive integer that is not prime is called composite. The fundamental theorem of arithmetic states that every positive integer can be uniquely expressed as a product of primes. This means that there is only one way to write a positive integer as a product of primes, up to the order in which the factors are written.
 
 Number theory has many practical applications, particularly in cryptography, which is the study of encoding messages to keep them secure from unauthorized access. Many encryption algorithms rely on the difficulty of factoring large composite numbers into primes, which is a problem that is believed to be computationally infeasible for sufficiently large integers. As a result, number theory plays a crucial role in the security of modern communication systems.
 

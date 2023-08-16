@@ -265,42 +265,41 @@ True</code></pre>
 </div>
 </div>
 <ol start="2" type="1">
-<li><strong>Prime Numbers</strong>: A prime number is a positive integer greater than 1 that has no positive integer divisors other than 1 and itself.</li>
+<li><strong>Irrational Numbers</strong>: An irrational number cannot be expressed as a ratio between two numbers and it does not repeat periodically. One example is the number <span class="math inline">\(\pi\)</span> (pi), which Python can approximate with float. It’s important to remember that due to the limitations of representing real numbers in digital computers, certain mathematical properties might not hold exactly in computer arithmetic, especially with floating-point numbers.</li>
 </ol>
 <div class="cell" data-execution_count="5">
 <details>
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> is_prime(n):</span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> n <span class="op">&lt;=</span> <span class="dv">1</span>:</span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="va">False</span></span>
-<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">2</span>, <span class="bu">int</span>(n<span class="op">**</span><span class="fl">0.5</span>) <span class="op">+</span> <span class="dv">1</span>):</span>
-<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> n <span class="op">%</span> i <span class="op">==</span> <span class="dv">0</span>:</span>
-<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>            <span class="cf">return</span> <span class="va">False</span></span>
-<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="va">True</span></span>
-<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(is_prime(<span class="dv">7</span>))  <span class="co"># True</span></span>
-<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(is_prime(<span class="dv">10</span>))  <span class="co"># False</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> math</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(math.pi)  <span class="co"># 3.141592653589793</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>3.141592653589793</code></pre>
+</div>
+</div>
+<ol start="3" type="1">
+<li><strong>Prime Numbers</strong>: One of the central themes in number theory is the study of prime numbers. A prime number is a positive integer greater than one that has no positive divisors other than one and itself. For example, 2, 3, 5, 7, 11, and 13 are all prime numbers. A positive integer that is not prime is called composite. The fundamental theorem of arithmetic states that every positive integer can be uniquely expressed as a product of primes. This means that there is only one way to write a positive integer as a product of primes, up to the order in which the factors are written.</li>
+</ol>
+<div class="cell" data-execution_count="6">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> is_prime(n):</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> n <span class="op">&lt;=</span> <span class="dv">1</span>:</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="va">False</span></span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">2</span>, <span class="bu">int</span>(n<span class="op">**</span><span class="fl">0.5</span>) <span class="op">+</span> <span class="dv">1</span>):</span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> n <span class="op">%</span> i <span class="op">==</span> <span class="dv">0</span>:</span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>            <span class="cf">return</span> <span class="va">False</span></span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="va">True</span></span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(is_prime(<span class="dv">7</span>))  <span class="co"># True</span></span>
+<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(is_prime(<span class="dv">10</span>))  <span class="co"># False</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>True
 False</code></pre>
 </div>
 </div>
-<ol start="3" type="1">
-<li><strong>Irrational Numbers</strong>: An irrational number cannot be expressed as a ratio between two numbers and it does not repeat periodically. One example is the number <span class="math inline">\(\pi\)</span> (pi), which Python can approximate with float. It’s important to remember that due to the limitations of representing real numbers in digital computers, certain mathematical properties might not hold exactly in computer arithmetic, especially with floating-point numbers.</li>
-</ol>
-<div class="cell" data-execution_count="6">
-<details>
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> math</span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(math.pi)  <span class="co"># 3.141592653589793</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-<div class="cell-output cell-output-stdout">
-<pre><code>3.141592653589793</code></pre>
-</div>
-</div>
-<p>One of the central themes in number theory is the study of prime numbers. A prime number is a positive integer greater than one that has no positive divisors other than one and itself. For example, 2, 3, 5, 7, 11, and 13 are all prime numbers. A positive integer that is not prime is called composite. The fundamental theorem of arithmetic states that every positive integer can be uniquely expressed as a product of primes. This means that there is only one way to write a positive integer as a product of primes, up to the order in which the factors are written.</p>
 <p>Number theory has many practical applications, particularly in cryptography, which is the study of encoding messages to keep them secure from unauthorized access. Many encryption algorithms rely on the difficulty of factoring large composite numbers into primes, which is a problem that is believed to be computationally infeasible for sufficiently large integers. As a result, number theory plays a crucial role in the security of modern communication systems.</p>
 <div class="cell" data-execution_count="7">
 <details>
@@ -338,13 +337,13 @@ False</code></pre>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1, 2, 3, 4, 6, 12]
-0.0002639293670654297 secs
+0.0002880096435546875 secs
 [1, 997]
-0.00010895729064941406 secs
+0.00010514259338378906 secs
 [1, 999983]
-0.0534520149230957 secs
+0.06030631065368652 secs
 [1, 997, 999983, 996983051]
-52.33896827697754 secs</code></pre>
+53.162992000579834 secs</code></pre>
 </div>
 </div>
 <hr>
