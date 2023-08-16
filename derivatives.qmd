@@ -38,8 +38,6 @@ print(derivative(f, 2))  # Output: 4.00001
 
 The derivative of $x^2$ is $2x$, so at $x=2$, the derivative is $4$. The output $4.00001$ is slightly higher due to the approximation.
 
-*Can you check the derivative of $f(x) = e^x$?*
-
 **Partial Derivatives**
 
 A partial derivative is like a normal derivative but it's used for functions with more than one variable. We consider one variable at a time and treat all other variables as constants.
