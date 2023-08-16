@@ -57,4 +57,4 @@ print(f"With growth constant k = {k}, the number of users after 2 years = 100*e^
 
 Using this growth constant, a company can predict future user numbers and strategize its business operations accordingly.
 
-*Can you check the derivative of $f(x) = e^x$? Evaluate the derivative function $f'(x)$ at $x=1, 2\   and\  3$ and compare with the corresponding value of $f(x)$*
+*Can you check the derivative of $f(x) = e^x$ using Python? Evaluate the derivative function $f'(x)$ at $x=1, 2\   and\  3$ and compare with the corresponding value of $f(x)$*
