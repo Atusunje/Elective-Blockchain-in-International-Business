@@ -84,7 +84,7 @@ In week 3 you'll learn basic probability theory.
 ```
 ## Descriptive Statistics
 
-In week 4 you'll learn to uncover underlying patterns and trends utilizing inferential statistics.
+In week 4 you'll learn to uncover underlying patterns and trends utilizing descriptive statistics.
 
 ```{=html}
 <div class="ratio ratio-16x9 m-5 w-75">
