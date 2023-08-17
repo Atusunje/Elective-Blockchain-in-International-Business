@@ -30,19 +30,15 @@ The general learning outcome of this course is:
 
 > The student is able to perform a well-defined task independently in a relatively clearly arranged situation, or is able to perform in a complex and unpredictable situation under supervision.
 
-After studying this course, you should be able to:
+After studying this course, you should be able to understand and apply:
 
--   Relate set theory to the concept of probability
+-   The basics of math and calculus
 
-<!-- -->
+-   The principles of Probability Theory
 
--   Interpret, modify and sketch mathematical operations
+-   The basic principles of descriptive and inferential statistics
 
--   Compute and solve mathematical equations
-
--   Compute, manipulate, solve and plot mathematical functions
-
--   Use Python or other data science script languages
+-   Python or other data science script languages.
 
 **Content**
 
@@ -101,5 +97,3 @@ In week 5 you'll learn to discover basic patterns and trends using inferential s
 </div>
 ```
 :::
-
-
