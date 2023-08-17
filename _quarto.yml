@@ -12,7 +12,7 @@ format:
     code-fold: true
     page-layout: full
 website:
-  title: "Introduction to Math and Stats"
+  title: "FMS"
   navbar:
     background: primary
     pinned: true

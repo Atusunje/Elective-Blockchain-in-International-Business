@@ -1,5 +1,5 @@
 ---
-title: "Introduction to Math and Stats"
+title: "Foundation Mathematics & Statistics"
 jupyter: envpy39
 ---
 
