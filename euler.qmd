@@ -1,5 +1,5 @@
 ---
-title: "Euler's Number and Natural Logarithms"
+title: "Euler's Number and Natural Logarithms 🤔"
 jupyter: envpy39
 ---
 
@@ -52,9 +52,15 @@ N_t = 200  # Number of users after 1 year
 # Finding k using natural logarithm
 k = np.log(N_t/N_0)
 
-print(f"With growth constant k = {k}, the number of users after 2 years = 100*e^(k*2) = {100*np.exp(k*2)}")
+print(f"With growth constant k = {k} the number of users after 2 years = 100*e^(k*2) = {100*np.exp(k*2)}")
 ```
 
 Using this growth constant, a company can predict future user numbers and strategize its business operations accordingly.
 
-*Can you check the derivative of $f(x) = e^x$ using Python? Evaluate the derivative function $f'(x)$ at $x=1, 2\   and\  3$ and compare with the corresponding value of $f(x)$*
+## Assignment {.unnumbered}
+
+**Basic:** Determine the derivative of $f(x) = e^x$ using Python (see [section](derivatives.html) on derivatives). Evaluate the derivative function $f'(x)$ at $x=1, 2\  and\  3$ and compare with the corresponding values of $f(x)$. Explain in a short video what you've noticed and elaborate.
+
+**Stretch:** Expand your video with a presentation of the most beautiful formula in mathematics.
+
+**Challenge:** Share your content online (e.g. Linkedin or Medium), gather feedback and write a reflection on it.
