@@ -184,7 +184,15 @@ $$ $$
 = C*\frac{1-1/(1+r)^k}{r}
 $$
 
-Where: - $PV$ is the present value of the cash flows. - $C$ is the constant cash flow received each period. - $r$ is the discount rate (expressed as a decimal). - $n$ is the number of periods (the investment horizon).
+Where:
+
+-   $PV$ is the present value of the cash flows.
+
+-   $C$ is the constant cash flow received each period.
+
+-   $r$ is the discount rate (expressed as a decimal).
+
+-   $n$ is the number of periods (the investment horizon).
 
 By discounting future cash flows back to their present value, we can compare investments with different time frames or cash flow patterns and make informed investment decisions.
 
