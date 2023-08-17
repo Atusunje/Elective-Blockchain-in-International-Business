@@ -69,7 +69,7 @@ In weeks 1 and 2 you'll be learning the following topics (sections marked with �
 
 8.  [**Derivatives**](derivatives.html)🤔
 
-9.  [**Euler's Number and Natural Logarithms**](euler.html)
+9.  [**Euler's Number and Natural Logarithms**](euler.html)🤔
 
 10. [**Integrals**](integrals.html)🤔
 
