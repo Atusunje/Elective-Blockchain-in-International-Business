@@ -74,7 +74,7 @@
     "href": "euler.html#assignment",
     "title": "Euler’s Number and Natural Logarithms 🤔",
     "section": "Assignment",
-    "text": "Assignment\nBasic: Determine the derivative of \\(f(x) = e^x\\) using Python (see section on derivatives). Evaluate the derivative function \\(f'(x)\\) at \\(x=1, 2\\  and\\  3\\) and compare with the corresponding values of \\(f(x)\\). Explain in a short video what you’ve noticed and elaborate.\nStretch: Expand your video with a presentation of the most beautiful formula in mathematics.\nChallenge: Share your content online (e.g. Linkedin or Medium), gather feedback and write a reflection on it."
+    "text": "Assignment\nBasic: Determine the derivative of \\(f(x) = e^x\\) using Python (see section on derivatives). Evaluate the derivative function \\(f'(x)\\) at \\(x=1, 2\\  and\\  3\\) and compare with the corresponding values of \\(f(x)\\). Explain in a short video what you’ve noticed and elaborate.\nStretch: Expand your video with a presentation of the most beautiful equation in mathematics.\nChallenge: Share your content online (e.g. Linkedin or Medium), gather feedback and write a reflection on it."
   },
   {
     "objectID": "numbertheory.html",

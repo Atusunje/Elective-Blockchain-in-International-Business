@@ -61,6 +61,6 @@ Using this growth constant, a company can predict future user numbers and strate
 
 **Basic:** Determine the derivative of $f(x) = e^x$ using Python (see [section](derivatives.html) on derivatives). Evaluate the derivative function $f'(x)$ at $x=1, 2\  and\  3$ and compare with the corresponding values of $f(x)$. Explain in a short video what you've noticed and elaborate.
 
-**Stretch:** Expand your video with a presentation of the most beautiful formula in mathematics.
+**Stretch:** Expand your video with a presentation of the most beautiful equation in mathematics.
 
 **Challenge:** Share your content online (e.g. Linkedin or Medium), gather feedback and write a reflection on it.
