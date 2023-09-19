@@ -13,6 +13,7 @@ format:
     page-layout: full
 website:
   title: "FMS"
+  favicon: "logo.png"
   navbar:
     background: primary
     pinned: true
