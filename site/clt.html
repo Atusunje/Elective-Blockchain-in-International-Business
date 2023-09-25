@@ -427,10 +427,21 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><p><strong>Pascal’s Triangle &amp; Galton Board</strong>: The progression of rows in Pascal’s Triangle can be thought of as the journey of a ball in the Galton Board. As you move down the rows in Pascal’s Triangle, the distribution of numbers (and their associated probabilities) starts to look like the distribution of balls in the Galton Board. Both show a tendency towards a bell-shaped curve as the number of trials or steps increases.</p></li>
 <li><p><strong>Central Limit Theorem</strong>: Just as the distribution of balls in the Galton Board approaches a normal distribution with more trials, the CLT tells us that the distribution of sample means will also approach a normal distribution as the sample size increases, regardless of the shape of the original distribution.</p></li>
 </ul>
-<p><strong>Relevance to Business Management:</strong></p>
-<p>For a Business Management student, understanding the Central Limit Theorem is crucial for making informed decisions based on data. For instance, when analyzing customer feedback, sales data, or employee performance, the CLT can provide insights into the overall trend and allow for better forecasting and decision-making.</p>
-<p><strong>Conclusion:</strong></p>
-<p>In essence, both Pascal’s Triangle and the Galton Board visually demonstrate the essence of the Central Limit Theorem. They show that as we increase the number of trials or samples, the distribution tends towards a predictable bell-shaped curve, which is foundational in many areas of business analytics and decision-making.</p>
+<p><strong>Application of the Central Limit Theorem in Finance</strong>:</p>
+<ol type="1">
+<li><p><strong>Portfolio Diversification</strong>:</p>
+<ul>
+<li><p>Individual assets, like stocks, might have returns that are volatile and don’t follow a normal distribution. However, when many such assets with different risk-return profiles are combined into a portfolio, the CLT comes into play. The average return of the portfolio, derived from a large number of assets, tends to follow a normal distribution, even if individual asset returns do not.</p></li>
+<li><p>This principle is the foundation of diversification, where the aim is to combine assets in such a way that the overall risk of the portfolio is minimized while achieving a desired return.</p></li>
+</ul></li>
+<li><p><strong>Value at Risk (VaR) Calculation</strong>:</p>
+<ul>
+<li><p>One of the key metrics used by financial institutions to measure and manage risk is Value at Risk (VaR). VaR provides an estimate of the potential loss an investment portfolio could face over a specified period for a given confidence interval.</p></li>
+<li><p>Given that the portfolio returns tend to be normally distributed (thanks to the CLT), financial institutions can use statistical methods to calculate VaR. For instance, if a portfolio has a one-day 95% VaR of $1 million, it means that there’s a 5% chance the portfolio will lose more than $1 million over the next day.</p></li>
+</ul></li>
+</ol>
+<p><strong>Example</strong>: Imagine a hedge fund that invests in 100 different stocks from various sectors. Some stocks might be highly volatile tech startups, while others might be stable utility companies. Individually, each stock’s return might be unpredictable and not normally distributed. However, when combined into a portfolio, the average return of these 100 stocks will approximate a normal distribution due to the CLT.</p>
+<p>Now, let’s say the hedge fund wants to assess its risk. Using the CLT and the normal distribution of the portfolio returns, the fund can calculate its VaR. If the fund determines that its one-day 95% VaR is $2 million, the fund’s managers know there’s a 5% chance of losing more than $2 million in a day. This information is crucial for making informed investment decisions, setting aside capital reserves, and communicating risks to stakeholders.</p>
 
 
 
