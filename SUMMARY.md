@@ -1,6 +1,8 @@
 # Table of contents
 
-* [intro-to-math-course](README.md)
+* [Elective Blockchain in International Business course](README.md)
+* [Course Overview](course-overview.md)
+* [Course activities](course-activities.md)
 * [Central Limit Theorem](clt.qmd)
 * [Derivatives 🤔](derivatives.qmd)
 * [Euler's Number and Natural Logarithms 🤔](euler.qmd)
