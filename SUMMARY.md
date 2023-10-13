@@ -1,0 +1,15 @@
+# Table of contents
+
+* [intro-to-math-course](README.md)
+* [Central Limit Theorem](clt.qmd)
+* [Derivatives 🤔](derivatives.qmd)
+* [Euler's Number and Natural Logarithms 🤔](euler.qmd)
+* [Exponents and Logarithms 🤔](exponentslogs.qmd)
+* [Functions](functions.qmd)
+* [Foundation Mathematics & Statistics](index.qmd)
+* [Integrals 🤔](integrals.qmd)
+* [Limits](limits.qmd)
+* [Number Theory 🤔](numbertheory.qmd)
+* [Order of operations 🤔](orderofoperations.qmd)
+* [Summations](summations.qmd)
+* [Variables](variables.qmd)
