@@ -1,13 +1,22 @@
 ---
-title: "Central Limit Theorem"
+title: Central Limit Theorem
 jupyter: envpy39
 ---
+
+# Week 1 - Blockchain Principles
+
+**Learning Goal**: By the end of the lesson, students should be able to:
+
+1. Understand the basic principles of Blockchain and the technology around it.
+2. Recognize the relevance of Blockchain in a crustless environment.
+3. Apply Blockchain concepts to solve a simple but practical business problem.
 
 ```{=html}
 <div class="ratio ratio-16x9 m-5 w-75">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/zeJD6dqJ5lo?si=HRkPZ4kH-RO63LrM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 </div>
 ```
+
 **Introduction to the Central Limit Theorem (CLT):**
 
 The Central Limit Theorem is a fundamental concept in statistics. It states that, regardless of the shape of the original distribution of a large dataset, the distribution of the sample means will approach a normal distribution (bell-shaped curve) as the sample size increases.
@@ -20,14 +29,14 @@ Pascal's Triangle is a triangular array of numbers where each number is the sum 
 
 Consider a simple coin toss, where you have two outcomes: heads (H) or tails (T). If you were to toss the coin twice, the possible outcomes are:
 
-1.  HH
-2.  HT
-3.  TH
-4.  TT
+1. HH
+2. HT
+3. TH
+4. TT
 
 Now, let's look at the third row of Pascal's Triangle:
 
-```         
+```
     1
    1 1
   1 2 1
@@ -35,9 +44,9 @@ Now, let's look at the third row of Pascal's Triangle:
 
 The third row (1, 2, 1) represents the number of ways to get 0, 1, or 2 heads when tossing the coin twice:
 
-1.  0 heads: TT (1 way)
-2.  1 head: HT or TH (2 ways)
-3.  2 heads: HH (1 way)
+1. 0 heads: TT (1 way)
+2. 1 head: HT or TH (2 ways)
+3. 2 heads: HH (1 way)
 
 As you can see, the coefficients in Pascal's Triangle (1, 2, 1) directly correspond to the number of ways each outcome can occur in our coin toss example.
 
@@ -232,27 +241,21 @@ As more and more balls are dropped, they start to form a distribution at the bot
             Example.galton();
         </script>
 ```
+
 **Connecting the Dots:**
 
--   **Pascal's Triangle & Galton Board**: The progression of rows in Pascal's Triangle can be thought of as the journey of a ball in the Galton Board. As you move down the rows in Pascal's Triangle, the distribution of numbers (and their associated probabilities) starts to look like the distribution of balls in the Galton Board. Both show a tendency towards a bell-shaped curve as the number of trials or steps increases.
-
--   **Central Limit Theorem**: Just as the distribution of balls in the Galton Board approaches a normal distribution with more trials, the CLT tells us that the distribution of sample means will also approach a normal distribution as the sample size increases, regardless of the shape of the original distribution.
+* **Pascal's Triangle & Galton Board**: The progression of rows in Pascal's Triangle can be thought of as the journey of a ball in the Galton Board. As you move down the rows in Pascal's Triangle, the distribution of numbers (and their associated probabilities) starts to look like the distribution of balls in the Galton Board. Both show a tendency towards a bell-shaped curve as the number of trials or steps increases.
+* **Central Limit Theorem**: Just as the distribution of balls in the Galton Board approaches a normal distribution with more trials, the CLT tells us that the distribution of sample means will also approach a normal distribution as the sample size increases, regardless of the shape of the original distribution.
 
 **Application of the Central Limit Theorem in Finance**:
 
-1.  **Portfolio Diversification**:
+1. **Portfolio Diversification**:
+   * Individual assets, like stocks, might have returns that are volatile and don't follow a normal distribution. However, when many such assets with different risk-return profiles are combined into a portfolio, the CLT comes into play. The average return of the portfolio, derived from a large number of assets, tends to follow a normal distribution, even if individual asset returns do not.
+   * This principle is the foundation of diversification, where the aim is to combine assets in such a way that the overall risk of the portfolio is minimized while achieving a desired return.
+2. **Value at Risk (VaR) Calculation**:
+   * One of the key metrics used by financial institutions to measure and manage risk is Value at Risk (VaR). VaR provides an estimate of the potential loss an investment portfolio could face over a specified period for a given confidence interval.
+   * Given that the portfolio returns tend to be normally distributed (thanks to the CLT), financial institutions can use statistical methods to calculate VaR. For instance, if a portfolio has a one-day 95% VaR of $1 million, it means that there's a 5% chance the portfolio will lose more than $1 million over the next day.
 
-    -   Individual assets, like stocks, might have returns that are volatile and don't follow a normal distribution. However, when many such assets with different risk-return profiles are combined into a portfolio, the CLT comes into play. The average return of the portfolio, derived from a large number of assets, tends to follow a normal distribution, even if individual asset returns do not.
+**Example**: Imagine a hedge fund that invests in 100 different stocks from various sectors. Some stocks might be highly volatile tech startups, while others might be stable utility companies. Individually, each stock's return might be unpredictable and not normally distributed. However, when combined into a portfolio, the average return of these 100 stocks will approximate a normal distribution due to the CLT.
 
-    -   This principle is the foundation of diversification, where the aim is to combine assets in such a way that the overall risk of the portfolio is minimized while achieving a desired return.
-
-2.  **Value at Risk (VaR) Calculation**:
-
-    -   One of the key metrics used by financial institutions to measure and manage risk is Value at Risk (VaR). VaR provides an estimate of the potential loss an investment portfolio could face over a specified period for a given confidence interval.
-
-    -   Given that the portfolio returns tend to be normally distributed (thanks to the CLT), financial institutions can use statistical methods to calculate VaR. For instance, if a portfolio has a one-day 95% VaR of \$1 million, it means that there's a 5% chance the portfolio will lose more than \$1 million over the next day.
-
-**Example**:
-Imagine a hedge fund that invests in 100 different stocks from various sectors. Some stocks might be highly volatile tech startups, while others might be stable utility companies. Individually, each stock's return might be unpredictable and not normally distributed. However, when combined into a portfolio, the average return of these 100 stocks will approximate a normal distribution due to the CLT.
-
-Now, let's say the hedge fund wants to assess its risk. Using the CLT and the normal distribution of the portfolio returns, the fund can calculate its VaR. If the fund determines that its one-day 95% VaR is \$2 million, the fund's managers know there's a 5% chance of losing more than \$2 million in a day. This information is crucial for making informed investment decisions, setting aside capital reserves, and communicating risks to stakeholders.
+Now, let's say the hedge fund wants to assess its risk. Using the CLT and the normal distribution of the portfolio returns, the fund can calculate its VaR. If the fund determines that its one-day 95% VaR is $2 million, the fund's managers know there's a 5% chance of losing more than $2 million in a day. This information is crucial for making informed investment decisions, setting aside capital reserves, and communicating risks to stakeholders.
