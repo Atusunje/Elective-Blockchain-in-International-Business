@@ -4,7 +4,7 @@
 * [Course Overview](course-overview.md)
 * [Course activities](course-activities.md)
 * [Assessment](assessment.md)
-* [Week 1 - Blockchain Principles](clt.qmd)
+* [Week 1 - Blockchain Principles](week-1-blockchain-principles.md)
 * [Derivatives 🤔](derivatives.qmd)
 * [Euler's Number and Natural Logarithms 🤔](euler.qmd)
 * [Exponents and Logarithms 🤔](exponentslogs.qmd)
